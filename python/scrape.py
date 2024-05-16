@@ -7,12 +7,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+import time
 
 from helper_functions import simplify_list
 from classes import Event,Bet,Bookmaker
 from constants.constants import DEBUG
 
-def scrape_wplay():
+def scrape_wplay() -> list[Event]:
     # create a bookmaker obj
     wplay_bookmaker = Bookmaker("Wplay","https://apuestas.wplay.co/es#upcoming-tab-FOOT")
     
@@ -78,7 +79,9 @@ def scrape_wplay():
         print(*list_of_events[-2:],sep=f"\n{'-'*80}\n")
       print("*"*80)
 
-def scrape_betplay():
+    return list_of_events
+
+def scrape_betplay() -> list[Event]:
   # create a bookmaker obj
   betplay_bookmaker = Bookmaker("Betplay","https://betplay.com.co/apuestas#sports-hub/football")
   # Configurar opciones de Edge headless
@@ -91,6 +94,10 @@ def scrape_betplay():
   wait = WebDriverWait(driver, 10)  # wait up to 10 seconds
   driver.implicitly_wait(10)
   driver.get(betplay_bookmaker.link)
+  # press the span with the class "wdz4amu"
+  try: driver.find_element(By.CSS_SELECTOR, "span.wdz4amu").click()
+  except: pass
+  
   
   def get_leages():
     # wait for the page to load
@@ -115,11 +122,12 @@ def scrape_betplay():
       leage = [leage for leage in leages_divs if not leage.text in leages_visited][0]
       leages_visited.append(leage.text)
     except IndexError:
-      print("ended")
+      if DEBUG:print("ended")
       break
     except Exception as e:
-      print("There was an error while trying to get the leage, skipping...")
-      print("❌")
+      if DEBUG:
+        print("There was an error while trying to get the leage, skipping...")
+        print("❌")
       continue
       
       
@@ -127,48 +135,101 @@ def scrape_betplay():
     try: leage.click()  
     except Exception as e:
       try: 
-        if DEBUG: print("\nThere was an error while trying to click the leage, trying again...")
+        if DEBUG:print("\nThere was an error while trying to click the leage, trying again...")
         wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'div.sc-ckEbSK.dfONcu')))
         wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[data-touch-feedback='true']")))
         leage.click()
         
       except Exception as e:
-        print("There was an error while trying to click the leage, skipping...")
-        print("❌")
+        if DEBUG:
+          print("There was an error while trying to click the leage, skipping...")
+          print("❌")
         continue
       
       
     events_lis = driver.find_elements(By.CSS_SELECTOR, "li.KambiBC-sandwich-filter__event-list-item")
     # for each li, create an event ands store it in a list
     for li in events_lis:
-      teams = li.find_element(By.CSS_SELECTOR,"div.KambiBC-sandwich-filter__event-detail").text.split("\n")
-      odds = li.find_elements(By.CSS_SELECTOR,"button.sc-bcXHqe.bIpOnq.sc-ipEyDJ.jhSst.KambiBC-betty-outcome")
-      events.append(Event([
-        Bet(
-          bookmaker=betplay_bookmaker,
-          bet_name=teams[0],
-          odd=float(odds[0].text)
-        ),
-        Bet(
-          bookmaker=betplay_bookmaker,
-          bet_name="Draw",
-          odd=float(odds[1].text)
-        ),
-        Bet(
-          bookmaker=betplay_bookmaker,
-          bet_name=teams[1],
-          odd=float(odds[2].text)
-        )        
-      ]))
+      # explicit wait for the element "button.sc-bcXHqe.bIpOnq.sc-ipEyDJ.jhSst.KambiBC-betty-outcome" to be clickable
+      
+      try:
+        teams = li.find_element(By.CSS_SELECTOR,"div.KambiBC-sandwich-filter__event-detail").text.split("\n")
+        odds = li.find_elements(By.CSS_SELECTOR,"button.sc-bcXHqe.bIpOnq.sc-ipEyDJ.jhSst.KambiBC-betty-outcome")
+        events.append(Event([
+          Bet(
+            bookmaker=betplay_bookmaker,
+            bet_name=teams[0],
+            odd=float(odds[0].text)
+          ),
+          Bet(
+            bookmaker=betplay_bookmaker,
+            bet_name="Draw",
+            odd=float(odds[1].text)
+          ),
+          Bet(
+            bookmaker=betplay_bookmaker,
+            bet_name=teams[1],
+            odd=float(odds[2].text)
+          )        
+        ]))
+      except:
+        if DEBUG:
+          print("There was an error while trying to get the event, skipping...")
+          print("❌")
+        continue
+        
     if DEBUG:print("✅ Done!",)
      
   print(*events,sep="\n")
   
-  # with open("betplay.html","w") as file: file.write(parsed_page.prettify())
-  input("continue"); driver.close()
+  return events
 
-def scrape_codere():
-  pass
+def scrape_codere() -> list[Event]:
+  codere_bookmaker = Bookmaker("Codere","https://m.codere.com.co/deportesCol/#/HomePage")
+
+  edge_options = Options()
+  if not DEBUG:
+    edge_options.add_argument("--headless")
+    edge_options.add_argument("--disable-gpu")
+
+  driver = webdriver.Edge(options=edge_options)
+  wait = WebDriverWait(driver, 10)
+  driver.implicitly_wait(10)
+  driver.get(codere_bookmaker.link)
+  # get the tag codere-sidebar-pc
+  # click cookies with the class "alert-button ion-focusable ion-activatable alert-button-role-confirm sc-ion-alert-md"
+  driver.find_element(By.CSS_SELECTOR,"button.alert-button.ion-focusable.ion-activatable.alert-button-role-confirm.sc-ion-alert-md").click()
+  
+  codere_sidebar = driver.find_element(By.CSS_SELECTOR,"codere-sidebar-pc")
+  
+  # get all the divs with "item-inner" class
+  items = codere_sidebar.find_elements(By.CSS_SELECTOR,"ion-item")
+  # get the item with the text "Fútbol"
+  football_item = [item for item in items if item.text == "Fútbol"][0]
+  football_item.click()
+  
+  countries_items = driver.find_elements(By.CSS_SELECTOR,".paisLiga ")
+  
+  # list_of_countries = driver.find_elements(By.CSS_SELECTOR,"div.sb-dropdown-desktop")
+  # # try 3 times to get at least 2 list_of_countries
+  # for i in range(3):
+  #   if len(list_of_countries) < 2:
+  #     time.sleep(1)
+  #     list_of_countries = driver.find_elements(By.CSS_SELECTOR,"div.sb-dropdown-desktop")
+  #   else:
+  #     break
+  #   # if its the last iteration, print an error message
+  #   if i == 2: raise Exception("There was an error while trying to get the list of countries, skipping...")
+  
+  
+  
+  
+  print(*[
+    c.text for c in countries_items
+  ],sep="\n")
+  
+  input("press enter to continue...")
+
 
 if __name__ == '__main__':
-  scrape_betplay()
+  scrape_codere()
