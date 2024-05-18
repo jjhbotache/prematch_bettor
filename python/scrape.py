@@ -188,48 +188,117 @@ def scrape_codere() -> list[Event]:
   codere_bookmaker = Bookmaker("Codere","https://m.codere.com.co/deportesCol/#/HomePage")
 
   edge_options = Options()
+  edge_options.add_argument("--disable-notifications")
   if not DEBUG:
     edge_options.add_argument("--headless")
     edge_options.add_argument("--disable-gpu")
 
   driver = webdriver.Edge(options=edge_options)
   wait = WebDriverWait(driver, 10)
-  driver.implicitly_wait(10)
-  driver.get(codere_bookmaker.link)
-  # get the tag codere-sidebar-pc
-  # click cookies with the class "alert-button ion-focusable ion-activatable alert-button-role-confirm sc-ion-alert-md"
-  driver.find_element(By.CSS_SELECTOR,"button.alert-button.ion-focusable.ion-activatable.alert-button-role-confirm.sc-ion-alert-md").click()
+  driver.implicitly_wait(2)
   
-  codere_sidebar = driver.find_element(By.CSS_SELECTOR,"codere-sidebar-pc")
+  def get_leagues_page():
+    driver.get(codere_bookmaker.link)
+    # get the tag codere-sidebar-pc
+    # click cookies with the class "alert-button ion-focusable ion-activatable alert-button-role-confirm sc-ion-alert-md"
+    try: driver.find_element(By.CSS_SELECTOR,"button.alert-button.ion-focusable.ion-activatable.alert-button-role-confirm.sc-ion-alert-md").click()
+    except: pass
+    # get all the divs with "item-inner" class
+    items = driver.find_element(By.CSS_SELECTOR,"codere-sidebar-pc").find_elements(By.CSS_SELECTOR,"ion-item")
+    # get the item with the text "Fútbol"
+    football_item = [item for item in items if item.text == "Fútbol"][0]
+    football_item.click()
   
-  # get all the divs with "item-inner" class
-  items = codere_sidebar.find_elements(By.CSS_SELECTOR,"ion-item")
-  # get the item with the text "Fútbol"
-  football_item = [item for item in items if item.text == "Fútbol"][0]
-  football_item.click()
-  
+  get_leagues_page()
   countries_items = driver.find_elements(By.CSS_SELECTOR,".paisLiga ")
-  
-  # list_of_countries = driver.find_elements(By.CSS_SELECTOR,"div.sb-dropdown-desktop")
-  # # try 3 times to get at least 2 list_of_countries
-  # for i in range(3):
-  #   if len(list_of_countries) < 2:
-  #     time.sleep(1)
-  #     list_of_countries = driver.find_elements(By.CSS_SELECTOR,"div.sb-dropdown-desktop")
-  #   else:
-  #     break
-  #   # if its the last iteration, print an error message
-  #   if i == 2: raise Exception("There was an error while trying to get the list of countries, skipping...")
-  
-  
-  
-  
-  print(*[
-    c.text for c in countries_items
-  ],sep="\n")
-  
-  input("press enter to continue...")
+  events = []  
 
+  driver.execute_script("window.open('');")
+  
+  events = []
+  for country_item in countries_items:
+    driver.switch_to.window(driver.window_handles[0])
+    current_country_item_name = country_item.text
+    for _ in range(3):
+      try:
+        country_item.click()
+        break
+      except Exception as e:
+        if DEBUG:
+          print(f"There was an error while trying to click the country {current_country_item_name} item, retrying...")
+        continue
+    else:
+      if DEBUG:
+        print(f"Failed to click the country {current_country_item_name} item 3 times, skipping...")
+        print("❌")
+      continue
+    # get the leages
+    leages = [leage for leage in driver.find_elements(By.CSS_SELECTOR,"sb-prematch-item") if leage.text]
+    # switch tab
+    driver.switch_to.window(driver.window_handles[1])
+    for i in range(len(leages)):
+      get_leagues_page()
+      countries_items_second_tab = driver.find_elements(By.CSS_SELECTOR,".paisLiga ")
+      for _ in range(3):
+        try:
+          current_country_item = [item for item in countries_items_second_tab if item.text == current_country_item_name][0]
+          current_country_item.click()
+          leages_second_tab = [leage for leage in driver.find_elements(By.CSS_SELECTOR,"sb-prematch-item") if leage.text]
+          leages_second_tab[i].click()
+          break
+        except Exception as e:
+          if DEBUG:print(f"There was an error while trying to get the leagues in {current_country_item_name}, retrying...")
+          continue
+      else:
+        if DEBUG:
+          print(f"Failed to get the leagues in {current_country_item_name} 3 times, skipping...")
+          print("❌")
+        continue
+      
+      # scrape the events -- --
+      
+      # try 3 times or until is more than 0
+      for _ in range(3):
+        row_bets = driver.execute_script('return document.querySelectorAll("ion-list sb-grid-item.has-special-bets")')
+        if len(row_bets) > 0: break
+        else:time.sleep(1.5)
+      
+      for row_bet in row_bets:
+        try:
+          teams = [ team.text for team in row_bet.find_elements(By.CSS_SELECTOR,"p.sb-grid-item--title.color-dark")]
+          odds = [ float(odd.text.replace(",",".").strip()) for odd in row_bet.find_elements(By.CSS_SELECTOR,"p.sb-button--subtitle.color-dark")]
+          
+          event = Event([
+              Bet(
+                bookmaker=codere_bookmaker,
+                bet_name=teams[0],
+                odd=odds[0]
+              ),
+              Bet(
+                bookmaker=codere_bookmaker,
+                bet_name="Draw",
+                odd=odds[1]
+              ),
+              Bet(
+                bookmaker=codere_bookmaker,
+                bet_name=teams[1],
+                odd=odds[2]
+              )        
+            ])
+      
+          if DEBUG:print(event)
+          events.append(event)
+        except Exception as e:
+          if DEBUG:
+            print(f"There was an error while trying to get an event in {current_country_item_name}, skipping...")
+            print("❌")
+          continue
+        
 
+  print("Scraped events from Codere:", len(events))
+  return events
+    
 if __name__ == '__main__':
+  scrape_betplay()
+  scrape_wplay()
   scrape_codere()
