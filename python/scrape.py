@@ -1,4 +1,5 @@
 # in this file we will scrape the data from the website and store it in a json file
+import json
 import requests
 import bs4
 from selenium import webdriver
@@ -13,7 +14,18 @@ from helper_functions import simplify_list
 from classes import Event,Bet,Bookmaker
 from constants.constants import DEBUG
 
+import threading
+
 def scrape_wplay() -> list[Event]:
+    """
+    This function scrapes pre-match events from the Wplay website and returns a list of Event objects.
+
+    Parameters:
+    None
+
+    Returns:
+    list[Event]: A list of Event objects containing the scraped pre-match events.
+    """
     # create a bookmaker obj
     wplay_bookmaker = Bookmaker("Wplay","https://apuestas.wplay.co/es#upcoming-tab-FOOT")
     
@@ -46,27 +58,28 @@ def scrape_wplay() -> list[Event]:
       try:
         mk_element = event.find(name='div',attrs={"class":"markets"})
         cols_elements = mk_element.find_all(name='td')
-      except Exception as e:
-        continue
-      bet_dicts = [
-        {
-          "odd":col.find("span",attrs={"class":"price dec"}).text,
-          "name":col.find("span",attrs={"class":"seln-label"}).text.strip(),
-        }
-        for col in cols_elements
-      ]
-      list_of_events.append(
-        Event(
-          bets=[
-            Bet(
-              bet_name=bet_dict["name"],
-              bookmaker=wplay_bookmaker,
-              odd=bet_dict["odd"]
-            )
-            for bet_dict in bet_dicts
-          ]
+        bet_dicts = [
+          {
+            "odd":col.find("span",attrs={"class":"price dec"}).text,
+            "name":col.find("span",attrs={"class":"seln-label"}).text.strip(),
+          }
+          for col in cols_elements
+        ]
+        list_of_events.append(
+          Event(
+            bets=[
+              Bet(
+                bet_name=bet_dict["name"],
+                bookmaker=wplay_bookmaker,
+                odd=bet_dict["odd"]
+              )
+              for bet_dict in bet_dicts
+            ]
+          )
         )
-      )
+      except Exception as e:
+        print(f"Error scraping event: {event}, error: {e}")
+        continue
       
     if DEBUG:
       print("*"*80)
@@ -78,6 +91,11 @@ def scrape_wplay() -> list[Event]:
         print("...")
         print(*list_of_events[-2:],sep=f"\n{'-'*80}\n")
       print("*"*80)
+
+
+    # write the data in a json file
+    with open('wplay_events.json', 'w', ) as outfile:
+      json.dump([event.dict() for event in list_of_events], outfile, indent=2, ensure_ascii=False)
 
     return list_of_events
 
@@ -104,7 +122,7 @@ def scrape_betplay() -> list[Event]:
     driver.find_element(By.XPATH,"//p[contains(text(), 'Ligas principales')]")
     # get all the divs with the attribute "data-touch-feedback=true"
     leages_divs = driver.find_elements(By.CSS_SELECTOR, "div[data-touch-feedback='true']")
-    leages_divs.append(driver.find_element(By.CSS_SELECTOR,"div.sc-ckEbSK.dfONcu"))
+    # leages_divs.append(driver.find_element(By.CSS_SELECTOR,"div.sc-ckEbSK.dfONcu"))
     divs_to_exclude = [ "Fichajes", "Premios Internacionales","Especiales" ]
     leages_divs = [leage for leage in leages_divs if not leage.text in divs_to_exclude]
     return leages_divs
@@ -126,9 +144,12 @@ def scrape_betplay() -> list[Event]:
       break
     except Exception as e:
       if DEBUG:
+        print(f"Exception with the leage", e)
+      else:
         print("There was an error while trying to get the leage, skipping...")
         print("❌")
       continue
+    
       
       
     if DEBUG:print(f"Scraping {leage.text}...",end="")
@@ -154,34 +175,46 @@ def scrape_betplay() -> list[Event]:
       
       try:
         teams = li.find_element(By.CSS_SELECTOR,"div.KambiBC-sandwich-filter__event-detail").text.split("\n")
-        odds = li.find_elements(By.CSS_SELECTOR,"button.sc-bcXHqe.bIpOnq.sc-ipEyDJ.jhSst.KambiBC-betty-outcome")
+        odds = [ btn.text for btn in li.find_elements(By.CSS_SELECTOR,"button")[:3] ]
+        
+        if DEBUG:
+          print(f"Teams: {teams}, Odds: {odds}")
+          
+        
         events.append(Event([
           Bet(
             bookmaker=betplay_bookmaker,
             bet_name=teams[0],
-            odd=float(odds[0].text)
+            odd=float(odds[0])
           ),
           Bet(
             bookmaker=betplay_bookmaker,
             bet_name="Draw",
-            odd=float(odds[1].text)
+            odd=float(odds[1])
           ),
           Bet(
             bookmaker=betplay_bookmaker,
             bet_name=teams[1],
-            odd=float(odds[2].text)
+            odd=float(odds[2])
           )        
         ]))
-      except:
+      except Exception as e:  
         if DEBUG:
+          print(f"Exception with the event", e)
+        else:
           print("There was an error while trying to get the event, skipping...")
           print("❌")
+          
         continue
         
     if DEBUG:print("✅ Done!",)
      
   print(*events,sep="\n")
   
+  # write the data in a json file
+  with open('codere_events.json', 'w',) as outfile:
+    json.dump([event.dict() for event in events], outfile, indent=2, ensure_ascii=False)
+
   return events
 
 def scrape_codere() -> list[Event]:
@@ -194,7 +227,7 @@ def scrape_codere() -> list[Event]:
     edge_options.add_argument("--disable-gpu")
 
   driver = webdriver.Edge(options=edge_options)
-  wait = WebDriverWait(driver, 10)
+  WebDriverWait(driver, 10)
   driver.implicitly_wait(2)
   
   def get_leagues_page():
@@ -296,9 +329,20 @@ def scrape_codere() -> list[Event]:
         
 
   print("Scraped events from Codere:", len(events))
+  
+  with open('all_events.json', 'w',) as outfile:
+    json.dump([event.dict() for event in events], outfile, indent=2, ensure_ascii=False)
   return events
     
 if __name__ == '__main__':
-  scrape_betplay()
   scrape_wplay()
-  scrape_codere()
+  input()
+  threads = [
+    threading.Thread(target=scrape_wplay),
+    threading.Thread(target=scrape_betplay),
+    threading.Thread(target=scrape_codere),
+  ]
+  
+  for thread in threads: thread.start()
+  
+  for thread in threads: thread.join()

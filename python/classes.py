@@ -3,8 +3,15 @@ class Bookmaker():
   def __init__(self, name:str,link:str):
     self.name = name.lower()
     self.link = link
+    
   def __str__(self):
     return f"{self.name}({self.link})"
+  
+  def dict(self):
+    return {
+      "name": self.name,
+      "link": self.link
+    }
 
 class Bet():
   def __init__(self,bookmaker:Bookmaker,bet_name:str,odd:float):
@@ -16,8 +23,17 @@ class Bet():
     self.odd = odd
     self.bet_id = f"{bookmaker.name[:2]}{bet_name[:2]}{bet_name[-2:]}".lower()
     
+    
   def __str__(self):
     return f"{self.bet_name}({self.odd})"
+  
+  def dict(self):
+    return {
+      "bet_id": self.bet_id,
+      "bet_name": self.bet_name,
+      "odd": self.odd,
+      "bookmaker": self.bookmaker.__dict__
+    }
 
 class Event():
   def __init__(self, bets:list[Bet]):
@@ -32,6 +48,15 @@ class Event():
     
   def __str__(self):
     return f"Event in {self.bookmaker.name}: {' '.join([str(bet) for bet in self.bets])}"
+  
+  def dict(self):
+    return {
+      "event_id": self.event_id,
+      "event_name": self.event_name,
+      "bets": [bet.dict() for bet in self.bets],
+      "bookmaker": self.bookmaker.dict(),
+      
+    }
     
 class EventsSet():
   def __init__(self, events:list[Event]):
