@@ -1,4 +1,4 @@
-from constants.constants import LIST_OF_NAMES_TAKEN_AS_DRAW
+from .constants.constants import LIST_OF_NAMES_TAKEN_AS_DRAW
 class Bookmaker():
   def __init__(self, name:str,link:str):
     self.name = name.lower()
