@@ -1,4 +1,5 @@
 from .constants.constants import LIST_OF_NAMES_TAKEN_AS_DRAW
+import Levenshtein
 class Bookmaker():
   def __init__(self, name:str,link:str):
     self.name = name.lower()
@@ -20,12 +21,12 @@ class Bet():
     if bet_name.lower() in LIST_OF_NAMES_TAKEN_AS_DRAW: self.bet_name = "Draw"
     else: self.bet_name = bet_name.strip().lower().capitalize()
     
-    self.odd = odd
+    self.odd = float(odd)
     self.bet_id = f"{bookmaker.name[:2]}{bet_name[:2]}{bet_name[-2:]}".lower()
     
     
   def __str__(self):
-    return f"{self.bet_name}({self.odd})"
+    return f"{self.bet_name}({self.odd}) in {self.bookmaker.name}"
   
   def dict(self):
     return {
@@ -61,6 +62,11 @@ class Event():
 class EventsSet():
   def __init__(self, events:list[Event]):
     self.events = events # at least 2 events
+    # if two events have the same name, bookmaker and odds, raise an error
+    for event in self.events:
+      for other_event in self.events:
+        if event != other_event:
+          assert event.event_name != other_event.event_name or event.bookmaker != other_event.bookmaker or event.bets != other_event.bets
     
     # for each option, get the option with the highest odd
     self.best_bets = []
@@ -70,35 +76,33 @@ class EventsSet():
       for event in self.events:
         same_bet.append(
           list(filter(
-            lambda b: (
-              b.bet_name.lower() == bet.bet_name.lower() or\
-              b.bet_name.lower() in bet.bet_name.lower() or\
-              bet.bet_name.lower() in b.bet_name.lower()
-            )            
-            ,event.bets
+            lambda b: Levenshtein.distance(b.bet_name.lower(), bet.bet_name.lower()) < 10,
+            event.bets
           ))
         )
       
       self.best_bets.append(
         max(same_bet,key=lambda bets: bets[0].odd)[0]
       )
-        
-      
       
     
     # calculate if it's a sure bet
     implicit_posibilities = [ 1/bet.odd for bet in self.best_bets ]
     sum_of_implicit_posibilities = sum(implicit_posibilities)
     self.is_sure_bet = sum_of_implicit_posibilities < 1
+    self.profit = 1 - sum_of_implicit_posibilities
+    
+    
+    # 
     
   def __str__(self):
-    return (f"""EventsSet for the event: {self.events[0].event_name}
+    return (f"""({round(self.profit,2)}%) EventsSet for the event: {self.events[0].event_name}
     Sure bet: {self.is_sure_bet}
     Best bets:
-    {" | ".join([str(bet) for bet in self.best_bets])}
+    {"\n".join([str(bet) for bet in self.best_bets])}
     """    )
     
-
+  
   # run a test
 
 if __name__ == "__main__":

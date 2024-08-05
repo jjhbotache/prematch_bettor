@@ -1,29 +1,44 @@
+import multiprocessing
 import threading
 
 from python.scrape import *
+from python.classes import EventsSet
+from python.telegram_functions import broadcast_msg
+import Levenshtein
+from itertools import combinations
 
 
 
+def get_event_groups(events, threshold=5, group_size=2):
+    groups = []
+    for group in combinations(events, group_size):
+        distances = [Levenshtein.distance(group[i].event_name, group[j].event_name) 
+                     for i in range(len(group)) for j in range(i + 1, len(group))]
+        if all(distance <= threshold for distance in distances):
+            groups.append(group)
+    return groups
+
+def wrapper(func):
+    return func()
 
 
+# Crear una lista de funciones a ejecutar
+functions = [scrape_wplay, scrape_betplay, scrape_codere]
 
+while True:
+    # Crear un pool de procesos
+    with multiprocessing.Pool() as pool:
+        # Mapear las funciones y ejecutarlas en paralelo
+        results = pool.map(wrapper, functions)
 
-
-
-
-
-if __name__ == '__main__':
-
-    threads = [
-        threading.Thread(target=scrape_wplay),
-        threading.Thread(target=scrape_betplay),
-        threading.Thread(target=scrape_codere)
-    ]
-    for t in threads:
-        t.start()
+        
+    similar_event_groups = get_event_groups(sum(results,[]), threshold=5)
+    event_sets = [EventsSet(group) for group in similar_event_groups]
+    sure_bets = [event_set for event_set in event_sets if event_set.is_sure_bet]
     
-    for t in threads:
-        t.join()
-        
-    print("All threads finished")
-        
+    msg_to_broadcast = "\n\n".join([str(s) for s in sure_bets])
+    broadcast_msg(msg_to_broadcast)
+
+
+
+

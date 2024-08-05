@@ -18,7 +18,7 @@ import threading
 import time
 
 def timed_scrape(func):
-    def wrapper():
+    def wrapper(*args, **kwargs):
         start_time = time.time()
         func()
         end_time = time.time()
@@ -26,7 +26,7 @@ def timed_scrape(func):
     return wrapper
 
 
-@timed_scrape
+# @timed_scrape
 def scrape_wplay() -> list[Event]:
     """
     This function scrapes pre-match events from the Wplay website and returns a list of Event objects.
@@ -111,7 +111,7 @@ def scrape_wplay() -> list[Event]:
     print("Scraped events from Wplay:", len(list_of_events))
     return list_of_events
 
-@timed_scrape
+# @timed_scrape
 def scrape_betplay() -> list[Event]:
   # create a bookmaker obj
   betplay_bookmaker = Bookmaker("Betplay","https://betplay.com.co/apuestas#sports-hub/football")
@@ -157,10 +157,14 @@ def scrape_betplay() -> list[Event]:
           )
         ]))
   
+  # write the data in a json file
+  with open('betplay_events.json', 'w', ) as outfile:
+    json.dump([event.dict() for event in events], outfile, indent=2, ensure_ascii=False)
+  
   print("Scraped events from Betplay:", len(events))
   return events
 
-@timed_scrape
+# @timed_scrape
 def scrape_codere() -> list[Event]:
   events = []
   def scrape_league_events(leage, local_bm):
@@ -214,6 +218,10 @@ def scrape_codere() -> list[Event]:
 
   for thread in threads:
       thread.join()
+  
+  # write on json file
+  with open('codere_events.json', 'w', ) as outfile:
+    json.dump([event.dict() for event in events], outfile, indent=2, ensure_ascii=False)
   
   print("Scraped events from Codere:", len(events))
   return events
