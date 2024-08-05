@@ -1,116 +1,5 @@
 [
   {
-    "event_id": "Atas",
-    "event_name": "Atlético nacional s.a vs Rionegro águilas doradas",
-    "bets": [
-      {
-        "bet_id": "beat.a",
-        "bet_name": "Atlético nacional s.a",
-        "odd": 1.95,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.35,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "berias",
-        "bet_name": "Rionegro águilas doradas",
-        "odd": 4.2,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Bora",
-    "event_name": "Boyacá chicó vs Deportivo pereira",
-    "bets": [
-      {
-        "bet_id": "bedera",
-        "bet_name": "Deportivo pereira",
-        "odd": 1.77,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.4,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bebocó",
-        "bet_name": "Boyacá chicó",
-        "odd": 5.2,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Atfe",
-    "event_name": "Atlético bucaramanga vs Independiente santa fe",
-    "bets": [
-      {
-        "bet_id": "beatga",
-        "bet_name": "Atlético bucaramanga",
-        "odd": 2.45,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 2.9,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "beinfe",
-        "bet_name": "Independiente santa fe",
-        "odd": 3.4,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
     "event_id": "Alyo",
     "event_name": "Alianza atlético vs Sport huancayo",
     "bets": [
@@ -370,265 +259,6 @@
     }
   },
   {
-    "event_id": "Ints",
-    "event_name": "Inglaterra (dor1an) esports vs Portugal (r0ge) esports",
-    "bets": [
-      {
-        "bet_id": "bepots",
-        "bet_name": "Portugal (r0ge) esports",
-        "odd": 3.65,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.15,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "beints",
-        "bet_name": "Inglaterra (dor1an) esports",
-        "odd": 1.8,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Arts",
-    "event_name": "Argentina (giannikid) esports vs Germany (mr_elidarius) esports",
-    "bets": [
-      {
-        "bet_id": "begets",
-        "bet_name": "Germany (mr_elidarius) esports",
-        "odd": 2.63,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.45,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bearts",
-        "bet_name": "Argentina (giannikid) esports",
-        "odd": 2.08,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Arts",
-    "event_name": "Argentina (giannikid) esports vs Portugal (r0ge) esports",
-    "bets": [
-      {
-        "bet_id": "bearts",
-        "bet_name": "Argentina (giannikid) esports",
-        "odd": 1.79,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.15,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bepots",
-        "bet_name": "Portugal (r0ge) esports",
-        "odd": 3.7,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Gets",
-    "event_name": "Germany (mr_elidarius) esports vs Netherlands (dangerdim77) esports",
-    "bets": [
-      {
-        "bet_id": "benets",
-        "bet_name": "Netherlands (dangerdim77) esports",
-        "odd": 2.08,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.5,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "begets",
-        "bet_name": "Germany (mr_elidarius) esports",
-        "odd": 2.6,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Bats",
-    "event_name": "Barcelona (sava) esports vs Paris saint-germain f.c. (menez) esports",
-    "bets": [
-      {
-        "bet_id": "bebats",
-        "bet_name": "Barcelona (sava) esports",
-        "odd": 2.55,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 2.8,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bepats",
-        "bet_name": "Paris saint-germain f.c. (menez) esports",
-        "odd": 2.45,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Mats",
-    "event_name": "Manchester city (dangerdim77) esports vs Manchester united (r0ge) esports",
-    "bets": [
-      {
-        "bet_id": "bemats",
-        "bet_name": "Manchester city (dangerdim77) esports",
-        "odd": 1.54,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.55,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bemats",
-        "bet_name": "Manchester united (r0ge) esports",
-        "odd": 4.9,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Lits",
-    "event_name": "Liverpool (giannikid) esports vs Tottenham hotspur (dor1an) esports",
-    "bets": [
-      {
-        "bet_id": "belits",
-        "bet_name": "Liverpool (giannikid) esports",
-        "odd": 2.06,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.45,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "betots",
-        "bet_name": "Tottenham hotspur (dor1an) esports",
-        "odd": 2.65,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
     "event_id": "Mats",
     "event_name": "Manchester city (supermario) esports vs Paris saint-germain f.c. (menez) esports",
     "bets": [
@@ -876,6 +506,191 @@
         "bet_id": "berets",
         "bet_name": "Real madrid (jake) esports",
         "odd": 3.15,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Arts",
+    "event_name": "Arsenal (mr_elidarius) esports vs Liverpool (giannikid) esports",
+    "bets": [
+      {
+        "bet_id": "belits",
+        "bet_name": "Liverpool (giannikid) esports",
+        "odd": 2.07,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.45,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bearts",
+        "bet_name": "Arsenal (mr_elidarius) esports",
+        "odd": 2.63,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Mats",
+    "event_name": "Manchester united (r0ge) esports vs Tottenham hotspur (dor1an) esports",
+    "bets": [
+      {
+        "bet_id": "betots",
+        "bet_name": "Tottenham hotspur (dor1an) esports",
+        "odd": 1.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bemats",
+        "bet_name": "Manchester united (r0ge) esports",
+        "odd": 3.75,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Bats",
+    "event_name": "Barcelona (sava) esports vs Real madrid (jake) esports",
+    "bets": [
+      {
+        "bet_id": "berets",
+        "bet_name": "Real madrid (jake) esports",
+        "odd": 2.7,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 2.9,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bebats",
+        "bet_name": "Barcelona (sava) esports",
+        "odd": 2.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Arts",
+    "event_name": "Arsenal (mr_elidarius) esports vs Manchester city (dangerdim77) esports",
+    "bets": [
+      {
+        "bet_id": "bearts",
+        "bet_name": "Arsenal (mr_elidarius) esports",
+        "odd": 2.55,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.4,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bemats",
+        "bet_name": "Manchester city (dangerdim77) esports",
+        "odd": 2.14,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Bats",
+    "event_name": "Barcelona (sava) esports vs Paris saint-germain f.c. (menez) esports",
+    "bets": [
+      {
+        "bet_id": "bepats",
+        "bet_name": "Paris saint-germain f.c. (menez) esports",
+        "odd": 2.45,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 2.88,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bebats",
+        "bet_name": "Barcelona (sava) esports",
+        "odd": 2.5,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"

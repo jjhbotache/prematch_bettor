@@ -6,7 +6,7 @@
       {
         "bet_id": "wpatal",
         "bet_name": "Atlético nacional",
-        "odd": 2.0,
+        "odd": 2.05,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -24,7 +24,7 @@
       {
         "bet_id": "wprias",
         "bet_name": "Rionegro aguilas",
-        "odd": 3.9,
+        "odd": 3.8,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -228,7 +228,7 @@
       {
         "bet_id": "wpcano",
         "bet_name": "Ca belgrano",
-        "odd": 2.7,
+        "odd": 2.75,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -237,7 +237,7 @@
       {
         "bet_id": "wpemte",
         "bet_name": "Draw",
-        "odd": 3.1,
+        "odd": 3.0,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -407,6 +407,80 @@
     }
   },
   {
+    "event_id": "Arto",
+    "event_name": "Argentinos juniors vs Sarmiento",
+    "bets": [
+      {
+        "bet_id": "wparrs",
+        "bet_name": "Argentinos juniors",
+        "odd": 1.909,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpemte",
+        "bet_name": "Draw",
+        "odd": 3.1,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpsato",
+        "bet_name": "Sarmiento",
+        "odd": 4.5,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "wplay",
+      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+    }
+  },
+  {
+    "event_id": "Caba",
+    "event_name": "Ca barracas central vs Talleres de cordoba",
+    "bets": [
+      {
+        "bet_id": "wpcaal",
+        "bet_name": "Ca barracas central",
+        "odd": 3.7,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpemte",
+        "bet_name": "Draw",
+        "odd": 3.4,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wptaba",
+        "bet_name": "Talleres de cordoba",
+        "odd": 2.0,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "wplay",
+      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+    }
+  },
+  {
     "event_id": "Crce",
     "event_name": "Cruzeiro mg vs Fortaleza ce",
     "bets": [
@@ -487,7 +561,7 @@
       {
         "bet_id": "wpvarj",
         "bet_name": "Vasco da gama rj",
-        "odd": 2.375,
+        "odd": 2.4,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -496,7 +570,7 @@
       {
         "bet_id": "wpemte",
         "bet_name": "Draw",
-        "odd": 3.25,
+        "odd": 3.2,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -777,80 +851,6 @@
     }
   },
   {
-    "event_id": "Chxy",
-    "event_name": "Chivas guadalajara vs L.a. galaxy",
-    "bets": [
-      {
-        "bet_id": "wpchra",
-        "bet_name": "Chivas guadalajara",
-        "odd": 2.5,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpemte",
-        "bet_name": "Draw",
-        "odd": 3.6,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpl.xy",
-        "bet_name": "L.a. galaxy",
-        "odd": 2.625,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "wplay",
-      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-    }
-  },
-  {
-    "event_id": "Ners",
-    "event_name": "Necaxa vs Seattle sounders",
-    "bets": [
-      {
-        "bet_id": "wpsers",
-        "bet_name": "Seattle sounders",
-        "odd": 1.8,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpemte",
-        "bet_name": "Draw",
-        "odd": 3.9,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpnexa",
-        "bet_name": "Necaxa",
-        "odd": 4.0,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "wplay",
-      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-    }
-  },
-  {
     "event_id": "Fcty",
     "event_name": "Fc cincinnati vs New york city",
     "bets": [
@@ -913,6 +913,80 @@
         "bet_id": "wpcods",
         "bet_name": "Colorado rapids",
         "odd": 2.35,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "wplay",
+      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+    }
+  },
+  {
+    "event_id": "Spca",
+    "event_name": "Sporting kansas city vs Toluca",
+    "bets": [
+      {
+        "bet_id": "wptoca",
+        "bet_name": "Toluca",
+        "odd": 2.3,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpemte",
+        "bet_name": "Draw",
+        "odd": 3.6,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpspty",
+        "bet_name": "Sporting kansas city",
+        "odd": 2.85,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "wplay",
+      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+    }
+  },
+  {
+    "event_id": "Hoke",
+    "event_name": "Houston dynamo vs Real salt lake",
+    "bets": [
+      {
+        "bet_id": "wphomo",
+        "bet_name": "Houston dynamo",
+        "odd": 2.0,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpemte",
+        "bet_name": "Draw",
+        "odd": 3.6,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpreke",
+        "bet_name": "Real salt lake",
+        "odd": 3.5,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -1406,80 +1480,6 @@
     }
   },
   {
-    "event_id": "Chxy",
-    "event_name": "Chivas guadalajara vs L.a. galaxy",
-    "bets": [
-      {
-        "bet_id": "wpchra",
-        "bet_name": "Chivas guadalajara",
-        "odd": 2.3,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpemte",
-        "bet_name": "Draw",
-        "odd": 3.75,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpl.xy",
-        "bet_name": "L.a. galaxy",
-        "odd": 2.8,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "wplay",
-      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-    }
-  },
-  {
-    "event_id": "Ners",
-    "event_name": "Necaxa vs Seattle sounders",
-    "bets": [
-      {
-        "bet_id": "wpsers",
-        "bet_name": "Seattle sounders",
-        "odd": 1.8,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpemte",
-        "bet_name": "Draw",
-        "odd": 3.65,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpnexa",
-        "bet_name": "Necaxa",
-        "odd": 4.2,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "wplay",
-      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-    }
-  },
-  {
     "event_id": "Bi21",
     "event_name": "Binh phuoc u21 vs Thanh hoa u21",
     "bets": [
@@ -1912,6 +1912,154 @@
         "bet_id": "wpfcan",
         "bet_name": "Fc pyunik yerevan",
         "odd": 1.833,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "wplay",
+      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+    }
+  },
+  {
+    "event_id": "Fcf)",
+    "event_name": "Fc killas (f) vs Universidad césar vallejo (f)",
+    "bets": [
+      {
+        "bet_id": "wpfcf)",
+        "bet_name": "Fc killas (f)",
+        "odd": 2.35,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpemte",
+        "bet_name": "Draw",
+        "odd": 3.5,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpunf)",
+        "bet_name": "Universidad césar vallejo (f)",
+        "odd": 2.45,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "wplay",
+      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+    }
+  },
+  {
+    "event_id": "Boir",
+    "event_name": "Botev plovdiv ii vs Fk strumska slava radomir",
+    "bets": [
+      {
+        "bet_id": "wpfkir",
+        "bet_name": "Fk strumska slava radomir",
+        "odd": 1.727,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpemte",
+        "bet_name": "Draw",
+        "odd": 3.35,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpboii",
+        "bet_name": "Botev plovdiv ii",
+        "odd": 4.0,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "wplay",
+      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+    }
+  },
+  {
+    "event_id": "Disi",
+    "event_name": "Dinamo 2 tbilisi vs Fc sioni bolnisi",
+    "bets": [
+      {
+        "bet_id": "wpdisi",
+        "bet_name": "Dinamo 2 tbilisi",
+        "odd": 2.7,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpemte",
+        "bet_name": "Draw",
+        "odd": 3.4,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpfcsi",
+        "bet_name": "Fc sioni bolnisi",
+        "odd": 2.2,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "wplay",
+      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+    }
+  },
+  {
+    "event_id": "Faii",
+    "event_name": "Fa tartu kalev vs Fc kuressaare ii",
+    "bets": [
+      {
+        "bet_id": "wpfaev",
+        "bet_name": "Fa tartu kalev",
+        "odd": 2.55,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpemte",
+        "bet_name": "Draw",
+        "odd": 3.45,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpfcii",
+        "bet_name": "Fc kuressaare ii",
+        "odd": 2.3,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -2430,80 +2578,6 @@
         "bet_id": "wphaem",
         "bet_name": "Hapoel kfar shalem",
         "odd": 4.5,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "wplay",
-      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-    }
-  },
-  {
-    "event_id": "Haon",
-    "event_name": "Hapoel petah tikva vs Hapoel rishon lezion",
-    "bets": [
-      {
-        "bet_id": "wphava",
-        "bet_name": "Hapoel petah tikva",
-        "odd": 1.533,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpemte",
-        "bet_name": "Draw",
-        "odd": 3.95,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wphaon",
-        "bet_name": "Hapoel rishon lezion",
-        "odd": 5.0,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "wplay",
-      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-    }
-  },
-  {
-    "event_id": "Haya",
-    "event_name": "Hapoel kfar saba vs Maccabi herzliya",
-    "bets": [
-      {
-        "bet_id": "wpmaya",
-        "bet_name": "Maccabi herzliya",
-        "odd": 1.833,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpemte",
-        "bet_name": "Draw",
-        "odd": 3.4,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wphaba",
-        "bet_name": "Hapoel kfar saba",
-        "odd": 3.85,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"

@@ -1,4 +1,5 @@
 import multiprocessing
+
 import threading
 
 from python.scrape import *
@@ -25,19 +26,24 @@ def wrapper(func):
 # Crear una lista de funciones a ejecutar
 functions = [scrape_wplay, scrape_betplay, scrape_codere]
 
+
 while True:
-    # Crear un pool de procesos
+# Crear un pool de procesos
     with multiprocessing.Pool() as pool:
-        # Mapear las funciones y ejecutarlas en paralelo
+    # Mapear las funciones y ejecutarlas en paralelo
         results = pool.map(wrapper, functions)
 
-        
+    
     similar_event_groups = get_event_groups(sum(results,[]), threshold=5)
     event_sets = [EventsSet(group) for group in similar_event_groups]
     sure_bets = [event_set for event_set in event_sets if event_set.is_sure_bet]
-    
+
     msg_to_broadcast = "\n\n".join([str(s) for s in sure_bets])
     broadcast_msg(msg_to_broadcast)
+
+
+
+
 
 
 
