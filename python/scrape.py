@@ -106,7 +106,10 @@ def scrape_wplay() -> list[Event]:
 
     # write the data in a json file
     with open('wplay_events.json', 'w', ) as outfile:
-      json.dump([event.dict() for event in list_of_events], outfile, indent=2, ensure_ascii=False)
+      try:
+        json.dump([event.dict() for event in list_of_events], outfile, indent=2, ensure_ascii=False)
+      except Exception as e:
+        if DEBUG:print(f"Error writing the json file: {e}")
 
     print("Scraped events from Wplay:", len(list_of_events))
     return list_of_events
@@ -117,49 +120,67 @@ def scrape_betplay() -> list[Event]:
   betplay_bookmaker = Bookmaker("Betplay","https://betplay.com.co/apuestas#sports-hub/football")
   "https://na-offering-api.kambicdn.net/offering/v2018/betplay/listView/football/colombia/liga_betplay_dimayor/all/matches.json?lang=es_CO&market=CO&client_id=2&channel_id=1&ncid=1722807203096&useCombined=true&useCombinedLive=true"
 
-  main_response = requests.get("https://na-offering-api.kambicdn.net/offering/v2018/betplay/event/live/open.json?lang=es_CO&market=CO&client_id=2&channel_id=1&ncid=1722807612994").json()
+  try:
+    main_response = requests.get("https://na-offering-api.kambicdn.net/offering/v2018/betplay/event/live/open.json?lang=es_CO&market=CO&client_id=2&channel_id=1&ncid=1722807612994").json()
+  except Exception as e:
+    if DEBUG:print(f"Error getting the response from the url: {e}")
+    return []
   
   football_groups_per_country = [ group for group in main_response["group"]["groups"] if group["englishName"] == "Football"][0]["groups"]
   
   
-  leages_per_country = [
-    {
-      "leages":[l["termKey"] for l in g["groups"]],
-      "country":g["termKey"]
-    }
-  for g in football_groups_per_country ]
+  leagues_per_country = []
+  for group in football_groups_per_country:
+    if "groups" not in group.keys(): continue
+    leagues = [l["termKey"] for l in group["groups"]]
+    country = group["termKey"]
+    leagues_per_country.append({
+      "leagues": leagues,
+      "country": country
+    })
   
   events = []  
   
-  for list_of_leages in leages_per_country:
-    for l in list_of_leages["leages"]:
-      response = requests.get(f"https://na-offering-api.kambicdn.net/offering/v2018/betplay/listView/football/{list_of_leages['country']}/{l}/all/matches.json?lang=es_CO&market=CO&client_id=2&channel_id=1&ncid=1722808065781&category=12579").json()
+  for list_of_leagues in leagues_per_country:
+    for l in list_of_leagues["leagues"]:
+      try:
+        response = requests.get(f"https://na-offering-api.kambicdn.net/offering/v2018/betplay/listView/football/{list_of_leagues['country']}/{l}/all/matches.json?lang=es_CO&market=CO&client_id=2&channel_id=1&ncid=1722808065781&category=12579").json()
+      except Exception as e:
+        if DEBUG:print(f"Error getting the response from the url: {e}")
+        continue
       leage_events = [e for e in response["events"] if "liveData" not in e.keys() ]
       
       for e in leage_events:
         try: outcomes = e["betOffers"][0]["outcomes"]
         except: continue
-        events.append(Event([
-          Bet(
-            bookmaker=betplay_bookmaker,
-            bet_name=outcomes[0]["participant"],
-            odd=outcomes[0]["odds"]/1000
-          ),
-          Bet(
-            bookmaker=betplay_bookmaker,
-            bet_name="Draw",
-            odd=outcomes[1]["odds"]/1000
-          ),
-          Bet(
-            bookmaker=betplay_bookmaker,
-            bet_name=outcomes[2]["participant"],
-            odd=outcomes[2]["odds"]/1000
-          )
-        ]))
+        try:
+          events.append(Event([
+            Bet(
+              bookmaker=betplay_bookmaker,
+              bet_name=outcomes[0]["participant"],
+              odd=outcomes[0]["odds"]/1000
+            ),
+            Bet(
+              bookmaker=betplay_bookmaker,
+              bet_name="Draw",
+              odd=outcomes[1]["odds"]/1000
+            ),
+            Bet(
+              bookmaker=betplay_bookmaker,
+              bet_name=outcomes[2]["participant"],
+              odd=outcomes[2]["odds"]/1000
+            )
+          ]))
+        except Exception as e:
+          if DEBUG:print(f"Error creating the event: {e}")
+          continue
   
   # write the data in a json file
   with open('betplay_events.json', 'w', ) as outfile:
-    json.dump([event.dict() for event in events], outfile, indent=2, ensure_ascii=False)
+    try:
+      json.dump([event.dict() for event in events], outfile, indent=2, ensure_ascii=False)
+    except Exception as e:
+      if DEBUG:print(f"Error writing the json file: {e}")
   
   print("Scraped events from Betplay:", len(events))
   return events
@@ -176,26 +197,29 @@ def scrape_codere() -> list[Event]:
         except:
             pass
     
-    league_events = [
-        Event([
-            Bet(
-                bookmaker=local_bm,
-                bet_name=event["Results"][0]["Name"],
-                odd=event["Results"][0]["Odd"]
-            ),
-            Bet(
-                bookmaker=local_bm,
-                bet_name="Draw",
-                odd=event["Results"][1]["Odd"]
-            ),
-            Bet(
-                bookmaker=local_bm,
-                bet_name=event["Results"][2]["Name"],
-                odd=event["Results"][2]["Odd"]
-            )
-        ])
-        for event in league_events
-    ]
+    league_events = []
+    for event in league_events:
+      try:
+        bets = [
+          Bet(
+            bookmaker=local_bm,
+            bet_name=event["Results"][0]["Name"],
+            odd=event["Results"][0]["Odd"]
+          ),
+          Bet(
+            bookmaker=local_bm,
+            bet_name="Draw",
+            odd=event["Results"][1]["Odd"]
+          ),
+          Bet(
+            bookmaker=local_bm,
+            bet_name=event["Results"][2]["Name"],
+            odd=event["Results"][2]["Odd"]
+          )
+        ]
+        league_events.append(Event(bets))
+      except:
+        continue
     
     events.extend(league_events)
     
@@ -221,21 +245,25 @@ def scrape_codere() -> list[Event]:
   
   # write on json file
   with open('codere_events.json', 'w', ) as outfile:
-    json.dump([event.dict() for event in events], outfile, indent=2, ensure_ascii=False)
+    try:
+      json.dump([event.dict() for event in events], outfile, indent=2, ensure_ascii=False)
+    except Exception as e:
+      if DEBUG:print(f"Error writing the json file: {e}")
   
   print("Scraped events from Codere:", len(events))
   return events
     
     
 if __name__ == '__main__':
-  print("Scraping data from the bookmakers...")
-  
-  threads = [
-    threading.Thread(target=scrape_wplay),
-    threading.Thread(target=scrape_betplay),
-    threading.Thread(target=scrape_codere),
-  ]
-  
-  for thread in threads: thread.start()
-  
-  for thread in threads: thread.join()
+  while True:
+    print("Scraping data from the bookmakers...")
+    
+    threads = [
+      threading.Thread(target=scrape_wplay),
+      threading.Thread(target=scrape_betplay),
+      threading.Thread(target=scrape_codere),
+    ]
+    
+    for thread in threads: thread.start()
+    
+    for thread in threads: thread.join()

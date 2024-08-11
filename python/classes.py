@@ -62,6 +62,7 @@ class Event():
 class EventsSet():
   def __init__(self, events:list[Event]):
     self.events = events # at least 2 events
+    
     # if two events have the same name, bookmaker and odds, raise an error
     for event in self.events:
       for other_event in self.events:

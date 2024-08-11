@@ -1,12 +1,12 @@
 [
   {
-    "event_id": "Alyo",
-    "event_name": "Alianza atlético vs Sport huancayo",
+    "event_id": "Buwn",
+    "event_name": "Burnley vs Luton town",
     "bets": [
       {
-        "bet_id": "bealco",
-        "bet_name": "Alianza atlético",
-        "odd": 1.7,
+        "bet_id": "beluwn",
+        "bet_name": "Luton town",
+        "odd": 2.4,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -15,201 +15,53 @@
       {
         "bet_id": "bedraw",
         "bet_name": "Draw",
-        "odd": 3.65,
+        "odd": 3.25,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
         }
       },
       {
-        "bet_id": "bespyo",
-        "bet_name": "Sport huancayo",
-        "odd": 4.75,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Cuys",
-    "event_name": "Cusco fc vs Sport boys",
-    "bets": [
-      {
-        "bet_id": "becufc",
-        "bet_name": "Cusco fc",
-        "odd": 1.4,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 4.5,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bespys",
-        "bet_name": "Sport boys",
-        "odd": 7.5,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Fcfc",
-    "event_name": "Fc cincinnati vs New york city fc",
-    "bets": [
-      {
-        "bet_id": "befcti",
-        "bet_name": "Fc cincinnati",
-        "odd": 2.0,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.55,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "benefc",
-        "bet_name": "New york city fc",
-        "odd": 3.55,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Hoke",
-    "event_name": "Houston dynamo vs Real salt lake",
-    "bets": [
-      {
-        "bet_id": "behomo",
-        "bet_name": "Houston dynamo",
-        "odd": 2.0,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.55,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bereke",
-        "bet_name": "Real salt lake",
-        "odd": 3.55,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Dety",
-    "event_name": "Deportivo toluca fc vs Sporting kansas city",
-    "bets": [
-      {
-        "bet_id": "bedefc",
-        "bet_name": "Deportivo toluca fc",
-        "odd": 2.25,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.75,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bespty",
-        "bet_name": "Sporting kansas city",
-        "odd": 2.75,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Clds",
-    "event_name": "Club león vs Colorado rapids",
-    "bets": [
-      {
-        "bet_id": "beclón",
-        "bet_name": "Club león",
+        "bet_id": "bebuey",
+        "bet_name": "Burnley",
         "odd": 2.95,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
         }
-      },
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "1.en",
+    "event_name": "1. fc saarbrücken vs Sv sandhausen",
+    "bets": [
       {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.45,
+        "bet_id": "be1.en",
+        "bet_name": "1. fc saarbrücken",
+        "odd": 1.65,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
         }
       },
       {
-        "bet_id": "becods",
-        "bet_name": "Colorado rapids",
-        "odd": 2.2,
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "besven",
+        "bet_name": "Sv sandhausen",
+        "odd": 4.5,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -222,161 +74,13 @@
     }
   },
   {
-    "event_id": "Naon",
-    "event_name": "Nashville sc vs New england revolution",
+    "event_id": "Fase",
+    "event_name": "Farense vs Moreirense",
     "bets": [
       {
-        "bet_id": "beneon",
-        "bet_name": "New england revolution",
-        "odd": 2.3,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.6,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "benasc",
-        "bet_name": "Nashville sc",
-        "odd": 2.85,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Mats",
-    "event_name": "Manchester city (supermario) esports vs Paris saint-germain f.c. (menez) esports",
-    "bets": [
-      {
-        "bet_id": "bepats",
-        "bet_name": "Paris saint-germain f.c. (menez) esports",
-        "odd": 1.87,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.1,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bemats",
-        "bet_name": "Manchester city (supermario) esports",
-        "odd": 3.4,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Bats",
-    "event_name": "Bayern munich (calvin) esports vs Real madrid (jake) esports",
-    "bets": [
-      {
-        "bet_id": "berets",
-        "bet_name": "Real madrid (jake) esports",
-        "odd": 2.75,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.2,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bebats",
-        "bet_name": "Bayern munich (calvin) esports",
-        "odd": 2.1,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Arts",
-    "event_name": "Arsenal (mr_elidarius) esports vs Manchester united (r0ge) esports",
-    "bets": [
-      {
-        "bet_id": "bemats",
-        "bet_name": "Manchester united (r0ge) esports",
-        "odd": 4.0,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.05,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bearts",
-        "bet_name": "Arsenal (mr_elidarius) esports",
-        "odd": 1.75,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Mats",
-    "event_name": "Manchester city (dangerdim77) esports vs Tottenham hotspur (dor1an) esports",
-    "bets": [
-      {
-        "bet_id": "betots",
-        "bet_name": "Tottenham hotspur (dor1an) esports",
-        "odd": 2.75,
+        "bet_id": "befase",
+        "bet_name": "Farense",
+        "odd": 2.8,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -392,9 +96,9 @@
         }
       },
       {
-        "bet_id": "bemats",
-        "bet_name": "Manchester city (dangerdim77) esports",
-        "odd": 2.05,
+        "bet_id": "bemose",
+        "bet_name": "Moreirense",
+        "odd": 2.5,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -407,13 +111,13 @@
     }
   },
   {
-    "event_id": "Bats",
-    "event_name": "Barcelona (sava) esports vs Manchester city (supermario) esports",
+    "event_id": "Beão",
+    "event_name": "Benfica vs Famalicão",
     "bets": [
       {
-        "bet_id": "bemats",
-        "bet_name": "Manchester city (supermario) esports",
-        "odd": 3.2,
+        "bet_id": "befaão",
+        "bet_name": "Famalicão",
+        "odd": 7.0,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -422,16 +126,16 @@
       {
         "bet_id": "bedraw",
         "bet_name": "Draw",
-        "odd": 2.7,
+        "odd": 4.9,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
         }
       },
       {
-        "bet_id": "bebats",
-        "bet_name": "Barcelona (sava) esports",
-        "odd": 2.14,
+        "bet_id": "bebeca",
+        "bet_name": "Benfica",
+        "odd": 1.43,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -444,13 +148,13 @@
     }
   },
   {
-    "event_id": "Bats",
-    "event_name": "Bayern munich (calvin) esports vs Paris saint-germain f.c. (menez) esports",
+    "event_id": "Cfga",
+    "event_name": "Cf estrela vs S.c. braga",
     "bets": [
       {
-        "bet_id": "bebats",
-        "bet_name": "Bayern munich (calvin) esports",
-        "odd": 2.2,
+        "bet_id": "bes.ga",
+        "bet_name": "S.c. braga",
+        "odd": 1.43,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -459,16 +163,16 @@
       {
         "bet_id": "bedraw",
         "bet_name": "Draw",
-        "odd": 3.1,
+        "odd": 4.8,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
         }
       },
       {
-        "bet_id": "bepats",
-        "bet_name": "Paris saint-germain f.c. (menez) esports",
-        "odd": 2.65,
+        "bet_id": "becfla",
+        "bet_name": "Cf estrela",
+        "odd": 6.5,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -481,50 +185,13 @@
     }
   },
   {
-    "event_id": "Pats",
-    "event_name": "Paris saint-germain f.c. (menez) esports vs Real madrid (jake) esports",
+    "event_id": "Ares",
+    "event_name": "Arouca vs Vitoria guimarães",
     "bets": [
       {
-        "bet_id": "bepats",
-        "bet_name": "Paris saint-germain f.c. (menez) esports",
-        "odd": 1.93,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 3.2,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "berets",
-        "bet_name": "Real madrid (jake) esports",
-        "odd": 3.15,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Arts",
-    "event_name": "Arsenal (mr_elidarius) esports vs Liverpool (giannikid) esports",
-    "bets": [
-      {
-        "bet_id": "belits",
-        "bet_name": "Liverpool (giannikid) esports",
-        "odd": 2.07,
+        "bet_id": "bearca",
+        "bet_name": "Arouca",
+        "odd": 2.8,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -540,9 +207,9 @@
         }
       },
       {
-        "bet_id": "bearts",
-        "bet_name": "Arsenal (mr_elidarius) esports",
-        "odd": 2.63,
+        "bet_id": "bevies",
+        "bet_name": "Vitoria guimarães",
+        "odd": 2.38,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -555,13 +222,13 @@
     }
   },
   {
-    "event_id": "Mats",
-    "event_name": "Manchester united (r0ge) esports vs Tottenham hotspur (dor1an) esports",
+    "event_id": "Alrd",
+    "event_name": "Almere city vs Fortuna sittard",
     "bets": [
       {
-        "bet_id": "betots",
-        "bet_name": "Tottenham hotspur (dor1an) esports",
-        "odd": 1.8,
+        "bet_id": "beford",
+        "bet_name": "Fortuna sittard",
+        "odd": 1.9,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -570,16 +237,16 @@
       {
         "bet_id": "bedraw",
         "bet_name": "Draw",
-        "odd": 3.1,
+        "odd": 3.5,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
         }
       },
       {
-        "bet_id": "bemats",
-        "bet_name": "Manchester united (r0ge) esports",
-        "odd": 3.75,
+        "bet_id": "bealty",
+        "bet_name": "Almere city",
+        "odd": 4.1,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -592,50 +259,13 @@
     }
   },
   {
-    "event_id": "Bats",
-    "event_name": "Barcelona (sava) esports vs Real madrid (jake) esports",
+    "event_id": "Fcen",
+    "event_name": "Fc utrecht vs Sc heerenveen",
     "bets": [
       {
-        "bet_id": "berets",
-        "bet_name": "Real madrid (jake) esports",
-        "odd": 2.7,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bedraw",
-        "bet_name": "Draw",
-        "odd": 2.9,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      },
-      {
-        "bet_id": "bebats",
-        "bet_name": "Barcelona (sava) esports",
-        "odd": 2.25,
-        "bookmaker": {
-          "name": "betplay",
-          "link": "https://betplay.com.co/apuestas#sports-hub/football"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "betplay",
-      "link": "https://betplay.com.co/apuestas#sports-hub/football"
-    }
-  },
-  {
-    "event_id": "Arts",
-    "event_name": "Arsenal (mr_elidarius) esports vs Manchester city (dangerdim77) esports",
-    "bets": [
-      {
-        "bet_id": "bearts",
-        "bet_name": "Arsenal (mr_elidarius) esports",
-        "odd": 2.55,
+        "bet_id": "bescen",
+        "bet_name": "Sc heerenveen",
+        "odd": 2.6,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -651,9 +281,1711 @@
         }
       },
       {
-        "bet_id": "bemats",
-        "bet_name": "Manchester city (dangerdim77) esports",
-        "odd": 2.14,
+        "bet_id": "befcht",
+        "bet_name": "Fc utrecht",
+        "odd": 2.6,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fcam",
+    "event_name": "Fc twente vs Sparta rotterdam",
+    "bets": [
+      {
+        "bet_id": "befcte",
+        "bet_name": "Fc twente",
+        "odd": 1.48,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 4.6,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bespam",
+        "bet_name": "Sparta rotterdam",
+        "odd": 6.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Azen",
+    "event_name": "Az alkmaar vs Nec nijmegen",
+    "bets": [
+      {
+        "bet_id": "beazar",
+        "bet_name": "Az alkmaar",
+        "odd": 1.42,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 4.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beneen",
+        "bet_name": "Nec nijmegen",
+        "odd": 7.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fcjk",
+    "event_name": "Fc groningen vs Rkc waalwijk",
+    "bets": [
+      {
+        "bet_id": "berkjk",
+        "bet_name": "Rkc waalwijk",
+        "odd": 2.05,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.4,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "befcen",
+        "bet_name": "Fc groningen",
+        "odd": 3.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Heen",
+    "event_name": "Heracles almelo vs Psv eindhoven",
+    "bets": [
+      {
+        "bet_id": "behelo",
+        "bet_name": "Heracles almelo",
+        "odd": 13.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 7.2,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bepsen",
+        "bet_name": "Psv eindhoven",
+        "odd": 1.18,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fele",
+    "event_name": "Feyenoord vs Pec zwolle",
+    "bets": [
+      {
+        "bet_id": "bepele",
+        "bet_name": "Pec zwolle",
+        "odd": 10.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 5.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beferd",
+        "bet_name": "Feyenoord",
+        "odd": 1.27,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Goii",
+    "event_name": "Go ahead eagles vs Willem ii",
+    "bets": [
+      {
+        "bet_id": "bewiii",
+        "bet_name": "Willem ii",
+        "odd": 3.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.75,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "begoes",
+        "bet_name": "Go ahead eagles",
+        "odd": 1.95,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Ajda",
+    "event_name": "Ajax vs Nac breda",
+    "bets": [
+      {
+        "bet_id": "benada",
+        "bet_name": "Nac breda",
+        "odd": 8.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 6.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beajax",
+        "bet_name": "Ajax",
+        "odd": 1.27,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Joen",
+    "event_name": "Jong ajax vs Jong psv eindhoven",
+    "bets": [
+      {
+        "bet_id": "bejoen",
+        "bet_name": "Jong psv eindhoven",
+        "odd": 2.43,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.6,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bejoax",
+        "bet_name": "Jong ajax",
+        "odd": 2.65,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Jode",
+    "event_name": "Jong az alkmaar vs Roda jc kerkrade",
+    "bets": [
+      {
+        "bet_id": "bejoar",
+        "bet_name": "Jong az alkmaar",
+        "odd": 2.6,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.75,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "berode",
+        "bet_name": "Roda jc kerkrade",
+        "odd": 2.43,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Flsp",
+    "event_name": "Flamengo-rj vs Palmeiras-sp",
+    "bets": [
+      {
+        "bet_id": "beflrj",
+        "bet_name": "Flamengo-rj",
+        "odd": 1.84,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.55,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bepasp",
+        "bet_name": "Palmeiras-sp",
+        "odd": 4.3,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Atsp",
+    "event_name": "Atlético-go vs São paulo-sp",
+    "bets": [
+      {
+        "bet_id": "besãsp",
+        "bet_name": "São paulo-sp",
+        "odd": 1.54,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.9,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beatgo",
+        "bet_name": "Atlético-go",
+        "odd": 6.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Baba",
+    "event_name": "Bahia-ba vs Vitória-ba",
+    "bets": [
+      {
+        "bet_id": "bebaba",
+        "bet_name": "Bahia-ba",
+        "odd": 1.73,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.65,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beviba",
+        "bet_name": "Vitória-ba",
+        "odd": 4.9,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Ata.",
+    "event_name": "Athletico paranaense-pr vs Internacional p. a.",
+    "bets": [
+      {
+        "bet_id": "beina.",
+        "bet_name": "Internacional p. a.",
+        "odd": 1.94,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.35,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beatpr",
+        "bet_name": "Athletico paranaense-pr",
+        "odd": 4.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Saik",
+    "event_name": "Sabah fk vs Zira ik",
+    "bets": [
+      {
+        "bet_id": "besafk",
+        "bet_name": "Sabah fk",
+        "odd": 2.63,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 2.65,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beziik",
+        "bet_name": "Zira ik",
+        "odd": 2.7,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fkik",
+    "event_name": "Fk lokomotiv gorna vs Minyor pernik",
+    "bets": [
+      {
+        "bet_id": "befkna",
+        "bet_name": "Fk lokomotiv gorna",
+        "odd": 1.9,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.15,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bemiik",
+        "bet_name": "Minyor pernik",
+        "odd": 3.55,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Duna",
+    "event_name": "Dunav ruse vs Montana",
+    "bets": [
+      {
+        "bet_id": "beduse",
+        "bet_name": "Dunav ruse",
+        "odd": 1.85,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bemona",
+        "bet_name": "Montana",
+        "odd": 3.6,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Aaoi",
+    "event_name": "Aa gent vs Sporting de charleroi",
+    "bets": [
+      {
+        "bet_id": "bespoi",
+        "bet_name": "Sporting de charleroi",
+        "odd": 2.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.67,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beaant",
+        "bet_name": "Aa gent",
+        "odd": 2.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Bege",
+    "event_name": "Beerschot vs Cercle brugge",
+    "bets": [
+      {
+        "bet_id": "becege",
+        "bet_name": "Cercle brugge",
+        "odd": 1.55,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 4.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bebeot",
+        "bet_name": "Beerschot",
+        "odd": 6.15,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fcke",
+    "event_name": "Fc copenhague vs Sønderjyske",
+    "bets": [
+      {
+        "bet_id": "besøke",
+        "bet_name": "Sønderjyske",
+        "odd": 5.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 4.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "befcue",
+        "bet_name": "Fc copenhague",
+        "odd": 1.64,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Aaff",
+    "event_name": "Aab aalborg vs Viborg ff",
+    "bets": [
+      {
+        "bet_id": "beviff",
+        "bet_name": "Viborg ff",
+        "odd": 1.94,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.85,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beaarg",
+        "bet_name": "Aab aalborg",
+        "odd": 3.7,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Mara",
+    "event_name": "Maribor vs Nš mura",
+    "bets": [
+      {
+        "bet_id": "bemaor",
+        "bet_name": "Maribor",
+        "odd": 1.41,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 4.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "benšra",
+        "bet_name": "Nš mura",
+        "odd": 5.6,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Flju",
+    "event_name": "Flora tallinn vs Nõmme kalju",
+    "bets": [
+      {
+        "bet_id": "benõju",
+        "bet_name": "Nõmme kalju",
+        "odd": 2.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beflnn",
+        "bet_name": "Flora tallinn",
+        "odd": 2.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "07ir",
+    "event_name": "07 vestur sorvagur vs B68 toftir",
+    "bets": [
+      {
+        "bet_id": "beb6ir",
+        "bet_name": "B68 toftir",
+        "odd": 1.85,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.85,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "be07ur",
+        "bet_name": "07 vestur sorvagur",
+        "odd": 3.35,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Sjps",
+    "event_name": "Sjk seinäjoki vs Vps",
+    "bets": [
+      {
+        "bet_id": "besjki",
+        "bet_name": "Sjk seinäjoki",
+        "odd": 1.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bevpps",
+        "bet_name": "Vps",
+        "odd": 3.9,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fcki",
+    "event_name": "Fc ktp vs Pk-35 helsinki",
+    "bets": [
+      {
+        "bet_id": "befctp",
+        "bet_name": "Fc ktp",
+        "odd": 1.35,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 5.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bepkki",
+        "bet_name": "Pk-35 helsinki",
+        "odd": 7.08,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Mofc",
+    "event_name": "Mol fehérvár vs Újpest fc",
+    "bets": [
+      {
+        "bet_id": "beújfc",
+        "bet_name": "Újpest fc",
+        "odd": 2.23,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.35,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bemoár",
+        "bet_name": "Mol fehérvár",
+        "odd": 3.15,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Nymy",
+    "event_name": "Nyíregyháza spartacus vs Puskás academy",
+    "bets": [
+      {
+        "bet_id": "bepumy",
+        "bet_name": "Puskás academy",
+        "odd": 1.79,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 4.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "benyus",
+        "bet_name": "Nyíregyháza spartacus",
+        "odd": 3.85,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Drrs",
+    "event_name": "Drogheda united vs Shamrock rovers",
+    "bets": [
+      {
+        "bet_id": "beshrs",
+        "bet_name": "Shamrock rovers",
+        "odd": 1.4,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 5.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedred",
+        "bet_name": "Drogheda united",
+        "odd": 6.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fyri",
+    "event_name": "Fylkir vs Ka akureyri",
+    "bets": [
+      {
+        "bet_id": "befyir",
+        "bet_name": "Fylkir",
+        "odd": 2.95,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.75,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bekari",
+        "bet_name": "Ka akureyri",
+        "odd": 2.08,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Brae",
+    "event_name": "Breiðablik vs Stjarnan gardabae",
+    "bets": [
+      {
+        "bet_id": "bestae",
+        "bet_name": "Stjarnan gardabae",
+        "odd": 2.65,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.9,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bebrik",
+        "bet_name": "Breiðablik",
+        "odd": 2.2,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fres",
+    "event_name": "Fram reykjavík vs Ía akranes",
+    "bets": [
+      {
+        "bet_id": "beíaes",
+        "bet_name": "Ía akranes",
+        "odd": 2.2,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.7,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "befrík",
+        "bet_name": "Fram reykjavík",
+        "odd": 2.7,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fhík",
+    "event_name": "Fh hafnarfjarðar vs Kr reykjavík",
+    "bets": [
+      {
+        "bet_id": "bekrík",
+        "bet_name": "Kr reykjavík",
+        "odd": 2.35,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.9,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "befhar",
+        "bet_name": "Fh hafnarfjarðar",
+        "odd": 2.45,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fcch",
+    "event_name": "Fc progrès niederkorn vs Jeunesse esch",
+    "bets": [
+      {
+        "bet_id": "befcrn",
+        "bet_name": "Fc progrès niederkorn",
+        "odd": 1.65,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.9,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bejech",
+        "bet_name": "Jeunesse esch",
+        "odd": 4.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Lide",
+    "event_name": "Lillestrøm vs Molde",
+    "bets": [
+      {
+        "bet_id": "beliøm",
+        "bet_name": "Lillestrøm",
+        "odd": 2.65,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.55,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bemode",
+        "bet_name": "Molde",
+        "odd": 2.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Wiaw",
+    "event_name": "Widzew łódź vs Śląsk wrocław",
+    "bets": [
+      {
+        "bet_id": "bewidź",
+        "bet_name": "Widzew łódź",
+        "odd": 2.2,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.15,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beślaw",
+        "bet_name": "Śląsk wrocław",
+        "odd": 3.35,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Gkce",
+    "event_name": "Gks katowice vs Piast gliwice",
+    "bets": [
+      {
+        "bet_id": "bepice",
+        "bet_name": "Piast gliwice",
+        "odd": 1.68,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.4,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "begkce",
+        "bet_name": "Gks katowice",
+        "odd": 5.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Ruia",
+    "event_name": "Ruch chorzów vs Wisla cracovia",
+    "bets": [
+      {
+        "bet_id": "bewiia",
+        "bet_name": "Wisla cracovia",
+        "odd": 2.3,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beruów",
+        "bet_name": "Ruch chorzów",
+        "odd": 2.7,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Chii",
+    "event_name": "Chojniczanka chojnice vs Lks lodz ii",
+    "bets": [
+      {
+        "bet_id": "belkii",
+        "bet_name": "Lks lodz ii",
+        "odd": 2.6,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.2,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bechce",
+        "bet_name": "Chojniczanka chojnice",
+        "odd": 2.4,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Alya",
+    "event_name": "Al arabi (qat) vs Al shahaniya",
+    "bets": [
+      {
+        "bet_id": "bealya",
+        "bet_name": "Al shahaniya",
+        "odd": 3.9,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 4.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bealt)",
+        "bet_name": "Al arabi (qat)",
+        "odd": 1.65,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Mfeň",
+    "event_name": "Mfk karviná vs Viktoria plzeň",
+    "bets": [
+      {
+        "bet_id": "bevieň",
+        "bet_name": "Viktoria plzeň",
+        "odd": 1.41,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 4.7,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bemfná",
+        "bet_name": "Mfk karviná",
+        "odd": 6.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Fc07",
+    "event_name": "Fc argeş vs Focşani 2007",
+    "bets": [
+      {
+        "bet_id": "befceş",
+        "bet_name": "Fc argeş",
+        "odd": 1.66,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.45,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "befo07",
+        "bet_name": "Focşani 2007",
+        "odd": 4.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Hana",
+    "event_name": "Hammarby if vs If brommapojkarna",
+    "bets": [
+      {
+        "bet_id": "behaif",
+        "bet_name": "Hammarby if",
+        "odd": 2.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beifna",
+        "bet_name": "If brommapojkarna",
+        "odd": 3.35,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Habk",
+    "event_name": "Hammarby tff vs Karlbergs bk",
+    "bets": [
+      {
+        "bet_id": "behaff",
+        "bet_name": "Hammarby tff",
+        "odd": 1.4,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 4.4,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bekabk",
+        "bet_name": "Karlbergs bk",
+        "odd": 5.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "76or",
+    "event_name": "76 igdir belediyespor vs Boluspor",
+    "bets": [
+      {
+        "bet_id": "beboor",
+        "bet_name": "Boluspor",
+        "odd": 2.4,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "be76or",
+        "bet_name": "76 igdir belediyespor",
+        "odd": 2.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Amük",
+    "event_name": "Amed sportif faaliyetler vs Fatih karagümrük",
+    "bets": [
+      {
+        "bet_id": "befaük",
+        "bet_name": "Fatih karagümrük",
+        "odd": 2.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beamer",
+        "bet_name": "Amed sportif faaliyetler",
+        "odd": 3.35,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Anor",
+    "event_name": "Ankaragücü vs Sanliurfaspor",
+    "bets": [
+      {
+        "bet_id": "beancü",
+        "bet_name": "Ankaragücü",
+        "odd": 1.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 4.8,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "besaor",
+        "bet_name": "Sanliurfaspor",
+        "odd": 10.5,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -667,11 +1999,344 @@
   },
   {
     "event_id": "Bats",
-    "event_name": "Barcelona (sava) esports vs Paris saint-germain f.c. (menez) esports",
+    "event_name": "Bayer 04 leverkusen (shone) esports vs Rb leipzig (vlajko) esports",
     "bets": [
       {
-        "bet_id": "bepats",
-        "bet_name": "Paris saint-germain f.c. (menez) esports",
+        "bet_id": "bebats",
+        "bet_name": "Bayer 04 leverkusen (shone) esports",
+        "odd": 2.28,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "berbts",
+        "bet_name": "Rb leipzig (vlajko) esports",
+        "odd": 2.55,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Atts",
+    "event_name": "Atalanta (giox) esports vs Marseille (kaluba) esports",
+    "bets": [
+      {
+        "bet_id": "beatts",
+        "bet_name": "Atalanta (giox) esports",
+        "odd": 2.38,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.35,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bemats",
+        "bet_name": "Marseille (kaluba) esports",
+        "odd": 2.28,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Atts",
+    "event_name": "Atalanta (giox) esports vs Villarreal cf (jekos) esports",
+    "bets": [
+      {
+        "bet_id": "bevits",
+        "bet_name": "Villarreal cf (jekos) esports",
+        "odd": 3.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beatts",
+        "bet_name": "Atalanta (giox) esports",
+        "odd": 1.96,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Mats",
+    "event_name": "Marseille (kaluba) esports vs Real betis (borees) esports",
+    "bets": [
+      {
+        "bet_id": "bemats",
+        "bet_name": "Marseille (kaluba) esports",
+        "odd": 2.28,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.15,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "berets",
+        "bet_name": "Real betis (borees) esports",
+        "odd": 2.5,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Rets",
+    "event_name": "Real betis (borees) esports vs Villarreal cf (jekos) esports",
+    "bets": [
+      {
+        "bet_id": "berets",
+        "bet_name": "Real betis (borees) esports",
+        "odd": 2.32,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.15,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bevits",
+        "bet_name": "Villarreal cf (jekos) esports",
+        "odd": 2.45,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Asts",
+    "event_name": "Aston villa (vlajko) esports vs West ham (eli) esports",
+    "bets": [
+      {
+        "bet_id": "bewets",
+        "bet_name": "West ham (eli) esports",
+        "odd": 1.98,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.3,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beasts",
+        "bet_name": "Aston villa (vlajko) esports",
+        "odd": 2.95,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Mats",
+    "event_name": "Marseille (kaluba) esports vs Villarreal cf (jekos) esports",
+    "bets": [
+      {
+        "bet_id": "bevits",
+        "bet_name": "Villarreal cf (jekos) esports",
+        "odd": 3.05,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.2,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bemats",
+        "bet_name": "Marseille (kaluba) esports",
+        "odd": 1.96,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Asts",
+    "event_name": "Aston villa (vlajko) esports vs Chelsea (bolec) esports",
+    "bets": [
+      {
+        "bet_id": "beasts",
+        "bet_name": "Aston villa (vlajko) esports",
+        "odd": 2.88,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bechts",
+        "bet_name": "Chelsea (bolec) esports",
+        "odd": 2.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Brts",
+    "event_name": "Brighton (shone) esports vs Newcastle united (glumac) esports",
+    "bets": [
+      {
+        "bet_id": "bebrts",
+        "bet_name": "Brighton (shone) esports",
+        "odd": 2.55,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "benets",
+        "bet_name": "Newcastle united (glumac) esports",
+        "odd": 2.2,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Atts",
+    "event_name": "Atalanta (giox) esports vs Real betis (borees) esports",
+    "bets": [
+      {
+        "bet_id": "berets",
+        "bet_name": "Real betis (borees) esports",
         "odd": 2.45,
         "bookmaker": {
           "name": "betplay",
@@ -681,16 +2346,127 @@
       {
         "bet_id": "bedraw",
         "bet_name": "Draw",
-        "odd": 2.88,
+        "odd": 3.3,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
         }
       },
       {
-        "bet_id": "bebats",
-        "bet_name": "Barcelona (sava) esports",
-        "odd": 2.5,
+        "bet_id": "beatts",
+        "bet_name": "Atalanta (giox) esports",
+        "odd": 2.25,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Asts",
+    "event_name": "Aston villa (vlajko) esports vs Newcastle united (glumac) esports",
+    "bets": [
+      {
+        "bet_id": "benets",
+        "bet_name": "Newcastle united (glumac) esports",
+        "odd": 2.1,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.2,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beasts",
+        "bet_name": "Aston villa (vlajko) esports",
+        "odd": 2.7,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Chts",
+    "event_name": "Chelsea (bolec) esports vs West ham (eli) esports",
+    "bets": [
+      {
+        "bet_id": "bechts",
+        "bet_name": "Chelsea (bolec) esports",
+        "odd": 2.55,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.0,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bewets",
+        "bet_name": "West ham (eli) esports",
+        "odd": 2.32,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Atts",
+    "event_name": "Atalanta (giox) esports vs Marseille (kaluba) esports",
+    "bets": [
+      {
+        "bet_id": "bemats",
+        "bet_name": "Marseille (kaluba) esports",
+        "odd": 2.3,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 3.35,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "beatts",
+        "bet_name": "Atalanta (giox) esports",
+        "odd": 2.38,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"

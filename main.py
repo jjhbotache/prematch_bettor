@@ -32,7 +32,7 @@ while True:
     with multiprocessing.Pool() as pool:
     # Mapear las funciones y ejecutarlas en paralelo
         results = pool.map(wrapper, functions)
-
+    print("\n")
     
     similar_event_groups = get_event_groups(sum(results,[]), threshold=5)
     event_sets = [EventsSet(group) for group in similar_event_groups]
