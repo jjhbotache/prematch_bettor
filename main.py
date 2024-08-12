@@ -38,8 +38,9 @@ while True:
     event_sets = [EventsSet(group) for group in similar_event_groups]
     sure_bets = [event_set for event_set in event_sets if event_set.is_sure_bet]
 
-    msg_to_broadcast = "\n\n".join([str(s) for s in sure_bets])
-    broadcast_msg(msg_to_broadcast)
+    if sure_bets:
+        msg_to_broadcast = "\n\n".join([str(s) for s in sure_bets])
+        broadcast_msg(msg_to_broadcast)
 
 
 
