@@ -2,10 +2,10 @@ import multiprocessing
 
 import threading
 
+from python.helper_functions import levenshtein_distance
 from python.scrape import *
 from python.classes import EventsSet
 from python.telegram_functions import broadcast_msg
-import Levenshtein
 from itertools import combinations
 
 
@@ -13,7 +13,7 @@ from itertools import combinations
 def get_event_groups(events, threshold=5, group_size=2):
     groups = []
     for group in combinations(events, group_size):
-        distances = [Levenshtein.distance(group[i].event_name, group[j].event_name) 
+        distances = [levenshtein_distance(group[i].event_name, group[j].event_name) 
                      for i in range(len(group)) for j in range(i + 1, len(group))]
         if all(distance <= threshold for distance in distances):
             groups.append(group)

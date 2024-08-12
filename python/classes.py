@@ -1,5 +1,5 @@
+from python.helper_functions import levenshtein_distance
 from .constants.constants import LIST_OF_NAMES_TAKEN_AS_DRAW
-import Levenshtein
 class Bookmaker():
   def __init__(self, name:str,link:str):
     self.name = name.lower()
@@ -77,7 +77,7 @@ class EventsSet():
       for event in self.events:
         same_bet.append(
           list(filter(
-            lambda b: Levenshtein.distance(b.bet_name.lower(), bet.bet_name.lower()) < 10,
+            lambda b: levenshtein_distance(b.bet_name.lower(), bet.bet_name.lower()) < 10,
             event.bets
           ))
         )

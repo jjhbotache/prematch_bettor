@@ -1,10 +1,12 @@
 import telebot
 import threading
-import time
+from dotenv import load_dotenv
 import os
 
-# Define el token del bot
-TOKEN = os.environ["TELEGRAM_TOKEN_API"]
+# Carga las variables del archivo .env en el entorno
+load_dotenv()
+
+TOKEN = os.getenv('TELEGRAM_TOKEN_API')
 
 # Crea una instancia del bot
 bot = telebot.TeleBot(TOKEN)

@@ -183,39 +183,25 @@ def scrape_betplay() -> list[Event]:
 def scrape_codere() -> list[Event]:
   events = []
   def scrape_league_events(leage, local_bm):
-    response = requests.get(f"https://m.codere.com.co/NavigationService/Home/GetEvents?parentId={leage['node_id']}&gameTypes=1")
+    response = requests.get(f"https://m.codere.com.co/NavigationService/Home/GetEvents?parentId={leage['node_id']}&gameTypes=1").json()
     league_events = []
-    for e in response.json():
-        try:
-            league_events.append(e["Games"][0])
-        except:
-            pass
-    
-    league_events = []
-    for event in league_events:
+    for e in response:
+      if e["isLive"] or e["SportName"] != "Fútbol": continue
       try:
+        game_results = e["Games"][0]["Results"]
         bets = [
           Bet(
             bookmaker=local_bm,
-            bet_name=event["Results"][0]["Name"],
-            odd=event["Results"][0]["Odd"]
-          ),
-          Bet(
-            bookmaker=local_bm,
-            bet_name="Draw",
-            odd=event["Results"][1]["Odd"]
-          ),
-          Bet(
-            bookmaker=local_bm,
-            bet_name=event["Results"][2]["Name"],
-            odd=event["Results"][2]["Odd"]
-          )
-        ]
+            bet_name=r["Name"],
+            odd=r["Odd"]
+          ) for r in game_results]
         league_events.append(Event(bets))
-      except:
+      except Exception as e:
+        print(f"Error creating the event: {e}")
         continue
-    
+
     events.extend(league_events)
+    
     
   local_bm = Bookmaker("Codere", "https://m.codere.com.co/deportesCol/#/HomePage")
   response = requests.get("https://m.codere.com.co/NavigationService/Home/GetCountries?parentid=358476322")
@@ -249,6 +235,9 @@ def scrape_codere() -> list[Event]:
     
     
 if __name__ == '__main__':
+  # e = scrape_codere()
+  # print(*e,sep="\n")
+  # input("Press enter to exit...")
   while True:
     print("Scraping data from the bookmakers...")
     
