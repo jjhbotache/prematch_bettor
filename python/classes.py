@@ -100,7 +100,7 @@ class EventsSet():
     return (f"""({round(self.profit,2)}%) EventsSet for the event: {self.events[0].event_name}
     Sure bet: {self.is_sure_bet}
     Best bets:
-    {"\n".join([str(bet) for bet in self.best_bets])}
+    {" - ".join([str(bet) for bet in self.best_bets])}
     """    )
     
   
