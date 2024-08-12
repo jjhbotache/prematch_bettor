@@ -45,7 +45,7 @@ class Event():
     # the event name will be the options that are not called "Draw", ordered alphabetically separated by " vs "
     
     self.event_name = " vs ".join(sorted([bet.bet_name for bet in self.bets if bet.bet_name.lower() not in LIST_OF_NAMES_TAKEN_AS_DRAW]))
-    self.event_id = f"{self.event_name[:2]}{self.event_name[-2:]}"
+    self.event_id = f"{self.bookmaker.name[:2]}-{self.bets[0].bet_id[2:]}-{self.bets[-1].bet_id[2:]}".lower()
     
   def __str__(self):
     return f"Event in {self.bookmaker.name}: {' '.join([str(bet) for bet in self.bets])}"
@@ -62,12 +62,6 @@ class Event():
 class EventsSet():
   def __init__(self, events:list[Event]):
     self.events = events # at least 2 events
-    
-    # if two events have the same name, bookmaker and odds, raise an error
-    for event in self.events:
-      for other_event in self.events:
-        if event != other_event:
-          assert event.event_name != other_event.event_name or event.bookmaker != other_event.bookmaker or event.bets != other_event.bets
     
     # for each option, get the option with the highest odd
     self.best_bets = []

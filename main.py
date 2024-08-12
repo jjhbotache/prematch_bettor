@@ -1,6 +1,5 @@
 import multiprocessing
 
-import threading
 
 from python.helper_functions import levenshtein_distance
 from python.scrape import *
@@ -34,10 +33,13 @@ while True:
         results = pool.map(wrapper, functions)
     print("\n")
     
-    similar_event_groups = get_event_groups(sum(results,[]), threshold=5)
+    combined_events = sum(results,[])
+    similar_event_groups = get_event_groups(combined_events, threshold=5)
     event_sets = [EventsSet(group) for group in similar_event_groups]
     sure_bets = [event_set for event_set in event_sets if event_set.is_sure_bet]
 
+
+    print("Sure bets found:", len(sure_bets))
     if sure_bets:
         msg_to_broadcast = "\n\n".join([str(s) for s in sure_bets])
         broadcast_msg(msg_to_broadcast)
