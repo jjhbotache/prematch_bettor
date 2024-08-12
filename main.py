@@ -37,12 +37,19 @@ while True:
     similar_event_groups = get_event_groups(combined_events, threshold=5)
     event_sets = [EventsSet(group) for group in similar_event_groups]
     sure_bets = [event_set for event_set in event_sets if event_set.is_sure_bet]
+    sure_bets.sort(key=lambda x: x.profit, reverse=True)
 
 
     print("Sure bets found:", len(sure_bets))
     if sure_bets:
-        msg_to_broadcast = "\n\n".join([str(s) for s in sure_bets])
-        broadcast_msg(msg_to_broadcast)
+        msg_to_broadcast = "\n\n".join([str(s) for s in sure_bets[:20]])
+        print(msg_to_broadcast)
+        for _ in range(3):
+            try:
+                broadcast_msg(msg_to_broadcast)
+                break
+            except Exception:
+                continue
 
 
 

@@ -190,7 +190,7 @@ def scrape_betplay() -> list[Event]:
           Bet(
             bookmaker=betplay_bookmaker,
             bet_name=bet.get("participant", "Draw"),
-            odd=bet["odds"]/100
+            odd=bet["odds"]/1000
           )
           for bet in bets
         ]

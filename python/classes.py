@@ -1,4 +1,4 @@
-from python.helper_functions import levenshtein_distance
+from python.helper_functions import levenshtein_distance, simplify_list
 from .constants.constants import LIST_OF_NAMES_TAKEN_AS_DRAW
 class Bookmaker():
   def __init__(self, name:str,link:str):
@@ -63,23 +63,37 @@ class EventsSet():
   def __init__(self, events:list[Event]):
     self.events = events # at least 2 events
     
+    self.bets = simplify_list( [ event.bets for event in self.events])
+    
+    # group bets by similarity in the name using levenshtein distance
+    grouped_bets = [[b] for b in self.events[0].bets]
+    
+    bets_to_group = simplify_list( [ event.bets for event in self.events[1:]])
+    for bet in bets_to_group:
+      # for each bet, look for the similar named bet in the grouped_bets
+      ideal = {
+        "index_group": None,
+        "distance": float("inf")
+      }
+      for i,group in enumerate(grouped_bets):
+        distance = min([levenshtein_distance(bet.bet_name.lower(),b.bet_name.lower()) for b in group])
+        if distance < ideal["distance"]:
+          ideal["distance"] = distance
+          ideal["index_group"] = i
+      
+      # put on the ideal group
+      grouped_bets[ideal["index_group"]].append(bet)
+    
+    
+    
+    
+    
     # for each option, get the option with the highest odd
-    self.best_bets = []
-    for bet in self.events[0].bets:
-      # for each bet, look for the same bet in each event
-      same_bet = []
-      for event in self.events:
-        same_bet.append(
-          list(filter(
-            lambda b: levenshtein_distance(b.bet_name.lower(), bet.bet_name.lower()) < 10,
-            event.bets
-          ))
-        )
-      
-      self.best_bets.append(
-        max(same_bet,key=lambda bets: bets[0].odd)[0]
-      )
-      
+    self.best_bets = [
+      max(group, key=lambda x: x.odd)
+      for group in grouped_bets
+    ]
+    
     
     # calculate if it's a sure bet
     implicit_posibilities = [ 1/bet.odd for bet in self.best_bets ]
@@ -91,10 +105,11 @@ class EventsSet():
     # 
     
   def __str__(self):
+    bet_strings = "\n".join([str(bet) for bet in self.best_bets])
     return (f"""({round(self.profit,2)}%) EventsSet for the event: {self.events[0].event_name}
     Sure bet: {self.is_sure_bet}
     Best bets:
-    {" - ".join([str(bet) for bet in self.best_bets])}
+    {bet_strings}
     """    )
     
   
@@ -110,18 +125,16 @@ if __name__ == "__main__":
   # print(*bookmakers,sep="\n")
   
   event_a = Event([
-    Bet(wplay,"local fs",1.5),
+    Bet(wplay,"tolima",1.5),
     Bet(wplay,"x",2.5),
-    Bet(wplay,"deportivo visitante",9.5)
+    Bet(wplay,"pereira",9.5)
   ])
   event_b = Event([
-    Bet(betplay,"Visitante",3.6),
+    Bet(betplay,"pereira",3.6),
     Bet(betplay,"x",5.7),
-    Bet(betplay,"Local",4.9),
+    Bet(betplay,"tolima",4.9),
   ])
   
-  print(event_a)
-  print(event_b)
   
   event_set = EventsSet([event_a,event_b])
   print(event_set)
