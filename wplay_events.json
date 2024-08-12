@@ -339,7 +339,7 @@
       {
         "bet_id": "wpcate",
         "bet_name": "Ca independiente",
-        "odd": 2.0,
+        "odd": 1.909,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -348,7 +348,7 @@
       {
         "bet_id": "wpemte",
         "bet_name": "Draw",
-        "odd": 3.0,
+        "odd": 3.1,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -357,7 +357,7 @@
       {
         "bet_id": "wproal",
         "bet_name": "Rosario central",
-        "odd": 4.333,
+        "odd": 4.5,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -598,7 +598,7 @@
       {
         "bet_id": "wphuan",
         "bet_name": "Huracan",
-        "odd": 2.0,
+        "odd": 1.85,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -607,7 +607,7 @@
       {
         "bet_id": "wpemte",
         "bet_name": "Draw",
-        "odd": 3.25,
+        "odd": 3.4,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -616,7 +616,7 @@
       {
         "bet_id": "wpcano",
         "bet_name": "Ca belgrano",
-        "odd": 3.9,
+        "odd": 4.333,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -1258,43 +1258,6 @@
     }
   },
   {
-    "event_id": "Hyfc",
-    "event_name": "Hyh export sebaco fc vs Managua fc",
-    "bets": [
-      {
-        "bet_id": "wpmafc",
-        "bet_name": "Managua fc",
-        "odd": 1.35,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wpemte",
-        "bet_name": "Draw",
-        "odd": 5.0,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      },
-      {
-        "bet_id": "wphyfc",
-        "bet_name": "Hyh export sebaco fc",
-        "odd": 6.25,
-        "bookmaker": {
-          "name": "wplay",
-          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-        }
-      }
-    ],
-    "bookmaker": {
-      "name": "wplay",
-      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
-    }
-  },
-  {
     "event_id": "Ared",
     "event_name": "Arema fc vs Dewa united",
     "bets": [
@@ -1924,6 +1887,43 @@
     }
   },
   {
+    "event_id": "Agan",
+    "event_name": "Agmk vs Pfk navbahor namangan",
+    "bets": [
+      {
+        "bet_id": "wpagmk",
+        "bet_name": "Agmk",
+        "odd": 2.7,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wpemte",
+        "bet_name": "Draw",
+        "odd": 2.9,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      },
+      {
+        "bet_id": "wppfan",
+        "bet_name": "Pfk navbahor namangan",
+        "odd": 2.5,
+        "bookmaker": {
+          "name": "wplay",
+          "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "wplay",
+      "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
+    }
+  },
+  {
     "event_id": "Gi23",
     "event_name": "Gil vicente u23 vs Sporting braga u23",
     "bets": [
@@ -2263,7 +2263,7 @@
       {
         "bet_id": "wpgkce",
         "bet_name": "Gks piast gliwice",
-        "odd": 1.615,
+        "odd": 1.6,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"
@@ -2272,7 +2272,7 @@
       {
         "bet_id": "wpemte",
         "bet_name": "Draw",
-        "odd": 3.65,
+        "odd": 3.7,
         "bookmaker": {
           "name": "wplay",
           "link": "https://apuestas.wplay.co/es#upcoming-tab-FOOT"

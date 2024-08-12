@@ -296,13 +296,13 @@
     }
   },
   {
-    "event_id": "Rece",
-    "event_name": "Real monarchs slc vs Tacoma defiance",
+    "event_id": "Gets",
+    "event_name": "Germany (dangerdim77) esports vs Portugal (dor1an) esports",
     "bets": [
       {
-        "bet_id": "berelc",
-        "bet_name": "Real monarchs slc",
-        "odd": 2.2,
+        "bet_id": "begets",
+        "bet_name": "Germany (dangerdim77) esports",
+        "odd": 1.98,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -311,16 +311,16 @@
       {
         "bet_id": "bedraw",
         "bet_name": "Draw",
-        "odd": 4.1,
+        "odd": 3.45,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
         }
       },
       {
-        "bet_id": "betace",
-        "bet_name": "Tacoma defiance",
-        "odd": 2.4,
+        "bet_id": "bepots",
+        "bet_name": "Portugal (dor1an) esports",
+        "odd": 2.8,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -333,13 +333,13 @@
     }
   },
   {
-    "event_id": "Alts",
-    "event_name": "Alemania (supermario) esports vs España (jake) esports",
+    "event_id": "Ests",
+    "event_name": "España (jake) esports vs Portugal (menez) esports",
     "bets": [
       {
-        "bet_id": "bealts",
-        "bet_name": "Alemania (supermario) esports",
-        "odd": 2.55,
+        "bet_id": "beests",
+        "bet_name": "España (jake) esports",
+        "odd": 3.35,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
@@ -348,16 +348,53 @@
       {
         "bet_id": "bedraw",
         "bet_name": "Draw",
-        "odd": 2.95,
+        "odd": 3.25,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"
         }
       },
       {
-        "bet_id": "beests",
-        "bet_name": "España (jake) esports",
-        "odd": 2.38,
+        "bet_id": "bepots",
+        "bet_name": "Portugal (menez) esports",
+        "odd": 1.85,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      }
+    ],
+    "bookmaker": {
+      "name": "betplay",
+      "link": "https://betplay.com.co/apuestas#sports-hub/football"
+    }
+  },
+  {
+    "event_id": "Bats",
+    "event_name": "Barcelona (jake) esports vs Real madrid (sava) esports",
+    "bets": [
+      {
+        "bet_id": "bebats",
+        "bet_name": "Barcelona (jake) esports",
+        "odd": 2.75,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "bedraw",
+        "bet_name": "Draw",
+        "odd": 2.88,
+        "bookmaker": {
+          "name": "betplay",
+          "link": "https://betplay.com.co/apuestas#sports-hub/football"
+        }
+      },
+      {
+        "bet_id": "berets",
+        "bet_name": "Real madrid (sava) esports",
+        "odd": 2.25,
         "bookmaker": {
           "name": "betplay",
           "link": "https://betplay.com.co/apuestas#sports-hub/football"

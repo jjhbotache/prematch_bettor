@@ -2,27 +2,34 @@ def simplify_list(lista):
     return [elemento for sublista in lista for elemento in (simplify_list(sublista) if isinstance(sublista, list) else [sublista])]
 
 def levenshtein_distance(str1, str2):
-    # Inicializar la matriz de distancias
-    dp = [[0 for _ in range(len(str2) + 1)] for _ in range(len(str1) + 1)]
-    
-    # Llenar la primera fila y columna
-    for i in range(len(str1) + 1):
-        dp[i][0] = i
-    for j in range(len(str2) + 1):
-        dp[0][j] = j
-    
-    # Llenar la matriz utilizando la fórmula de Levenshtein
-    for i in range(1, len(str1) + 1):
-        for j in range(1, len(str2) + 1):
-            if str1[i - 1] == str2[j - 1]:
-                dp[i][j] = dp[i - 1][j - 1]  # No se necesita operación
-            else:
-                dp[i][j] = min(dp[i - 1][j] + 1,    # Eliminación
-                               dp[i][j - 1] + 1,    # Inserción
-                               dp[i - 1][j - 1] + 1)  # Sustitución
-    
-    # La distancia de Levenshtein es el valor en la esquina inferior derecha de la matriz
-    return dp[len(str1)][len(str2)]
+    # Verificación de tipos
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        raise TypeError("Ambos argumentos deben ser strings")
+
+    # Aseguramos que str1 sea la cadena más corta para minimizar el uso de memoria
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+
+    # Inicializar la fila previa
+    previous_row = range(len(str2) + 1)
+
+    # Iterar sobre cada carácter de str1
+    for i, c1 in enumerate(str1, 1):
+        current_row = [i]
+        for j, c2 in enumerate(str2, 1):
+            insertions = previous_row[j] + 1
+            deletions = current_row[j - 1] + 1
+            substitutions = previous_row[j - 1] + (c1 != c2)
+            current_row.append(min(insertions, deletions, substitutions))
+        previous_row = current_row
+
+    return previous_row[-1]
+
+
+if __name__ == "__main__":
+    print(
+        levenshtein_distance("holaa", "holasa") # 1
+    )
 
 if __name__ == "__main__":
     print(
