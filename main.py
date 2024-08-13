@@ -14,7 +14,7 @@ from time import sleep
 def wrapper(func):
     return func()
 
-send_msg = False                        
+send_msg = True                        
 
 # Crear una lista de funciones a ejecutar
 functions = [scrape_wplay, scrape_betplay, scrape_codere]
