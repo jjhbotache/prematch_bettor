@@ -52,7 +52,7 @@ class Event():
     self.event_id = f"{self.bookmaker.name[:2]}-{self.bets[0].bet_id[2:]}-{self.bets[-1].bet_id[2:]}".lower()
     
   def __str__(self):
-    return f"Event in {self.bookmaker.name}: \\n{'\\n'.join([str(bet) for bet in self.bets])}"
+    return "Event in {}: \n{}".format(self.bookmaker.name, '\n'.join([str(bet) for bet in self.bets]))
   
   def dict(self):
     return {
