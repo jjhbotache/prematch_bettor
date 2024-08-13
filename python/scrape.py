@@ -187,8 +187,17 @@ def scrape_betplay() -> list[Event]:
     
     for path in paths:
       if len(path.split("/"))<3:continue
-      response = requests.get(f"https://na-offering-api.kambicdn.net/offering/v2018/betplay/listView/{path}/all/matches.json?lang=es_CO&market=CO&client_id=2&channel_id=1&ncid=1723476962160&useCombined=true&useCombinedLive=true")
-      data = response.json()
+      for attemp in range(3):
+        try:
+          response = requests.get(f"https://na-offering-api.kambicdn.net/offering/v2018/betplay/listView/{path}/all/matches.json?lang=es_CO&market=CO&client_id=2&channel_id=1&ncid=1723476962160&useCombined=true&useCombinedLive=true")
+          data = response.json()
+          break
+        except Exception as e:
+          time_to_wait = 2 ** (attemp)
+          print(f"Error retrieving data from API: {e}, waiting {time_to_wait} seconds")
+          time.sleep(time_to_wait )
+      else:
+        raise Exception("Failed to retrieve data from API after 3 attempts")
       events_from_quey = data["events"]
       for event_from_quey in events_from_quey:
         try:
@@ -285,8 +294,9 @@ def scrape_codere() -> list[Event]:
     
 if __name__ == '__main__':
   print("Scraping data from the bookmakers...")
-  
-
+  while True:
+    print("Scraping betplay...")
+    scrape_betplay()
   with concurrent.futures.ThreadPoolExecutor() as executor:
     wplay_future = executor.submit(scrape_wplay)
     betplay_future = executor.submit(scrape_betplay)

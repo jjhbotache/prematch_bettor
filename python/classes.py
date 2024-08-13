@@ -1,6 +1,7 @@
 from python.helper_functions import football_name_normalize, simplify_list
 from levenshtein_distance import Levenshtein
 from .constants.constants import LIST_OF_NAMES_TAKEN_AS_DRAW
+import os
 class Bookmaker():
   def __init__(self, name:str,link:str):
     self.name = name.lower()
@@ -29,7 +30,7 @@ class Bet():
     
     
   def __str__(self):
-    return f"{self.bet_name}\t\t({self.odd})\t\tin {self.bookmaker.name}"
+    return f"{self.bet_name.ljust(20)}\t\t({self.odd})\t\tin {self.bookmaker.name}"
   
   def dict(self):
     return {
@@ -47,11 +48,11 @@ class Event():
     self.bets = bets
     # the event name will be the options that are not called "Draw", ordered alphabetically separated by " vs "
     
-    self.event_name = " vs ".join(sorted([bet.bet_name for bet in self.bets if bet.bet_name.lower() not in LIST_OF_NAMES_TAKEN_AS_DRAW]))
+    self.event_name = " vs ".join(sorted([bet.bet_name for bet in self.bets if bet.bet_name.lower() not in LIST_OF_NAMES_TAKEN_AS_DRAW], key=lambda x: football_name_normalize(x)))
     self.event_id = f"{self.bookmaker.name[:2]}-{self.bets[0].bet_id[2:]}-{self.bets[-1].bet_id[2:]}".lower()
     
   def __str__(self):
-    return f"Event in {self.bookmaker.name}: {' '.join([str(bet) for bet in self.bets])}"
+    return f"Event in {self.bookmaker.name}: \n{'\n'.join([str(bet) for bet in self.bets])}"
   
   def dict(self):
     return {
@@ -64,7 +65,9 @@ class Event():
     
 class EventsSet():
   def __init__(self, events:list[Event]):
+    
     if len(events) < 2: raise ValueError("An event set must have at least 2 events")
+    
     
     self.events = events # at least 2 events
     
@@ -104,6 +107,9 @@ class EventsSet():
     
     
     
+    
+    
+    
     # calculate if it's a sure bet
     implicit_posibilities = [ 1/bet.odd for bet in self.best_bets ]
     sum_of_implicit_posibilities = sum(implicit_posibilities)
@@ -111,7 +117,12 @@ class EventsSet():
     self.profit = (1/sum_of_implicit_posibilities - 1)*100
     
     
-    # 
+    if self.is_sure_bet:
+      for group in grouped_bets: print("group",*group) 
+      
+      print("best bets",*self.best_bets, sep="\n")
+      print("profit",self.profit) 
+      input()
     
   def __str__(self):
     bet_strings = "\n".join([str(bet) for bet in self.best_bets])
