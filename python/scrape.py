@@ -4,12 +4,13 @@ import requests
 import bs4
 import time
 
-from .helper_functions import create_events_sets, simplify_list
+from .helper_functions import create_events_groups, simplify_list
 from .classes import Event,Bet,Bookmaker
 from .constants.constants import DEBUG
 
 import threading
 import time
+import concurrent.futures
 
 save_on_json = False
 
@@ -270,30 +271,20 @@ def scrape_codere() -> list[Event]:
 if __name__ == '__main__':
   print("Scraping data from the bookmakers...")
   
+
+  with concurrent.futures.ThreadPoolExecutor() as executor:
+    wplay_future = executor.submit(scrape_wplay)
+    betplay_future = executor.submit(scrape_betplay)
+    codere_future = executor.submit(scrape_codere)
+
+    events = [
+      *wplay_future.result(),
+      *betplay_future.result(),
+      *codere_future.result(),
+    ]
   
-  events = [
-    *scrape_wplay(),
-    *scrape_betplay(),
-    *scrape_codere(),
-  ]
-  
-  events_sets = create_events_sets(events)
-  
-  for k in events_sets.keys():
-    list_of_events = events_sets[k]
-    print([es.event_name for es in  list_of_events], sep="\n")
-    print("-"*80,"\n")
-  
-  
-  # threads = [
-  #   threading.Thread(target=scrape_wplay),
-  #   threading.Thread(target=scrape_betplay),
-  #   threading.Thread(target=scrape_codere),
-  # ]
-  
-  # for thread in threads: thread.start()
-  
-  # for thread in threads: thread.join()
+  events_sets = create_events_groups(events)
+  input()
   
   
   

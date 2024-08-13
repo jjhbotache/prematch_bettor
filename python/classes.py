@@ -1,4 +1,5 @@
-from python.helper_functions import levenshtein_distance, simplify_list
+from python.helper_functions import simplify_list
+from levenshtein_distance import Levenshtein
 from .constants.constants import LIST_OF_NAMES_TAKEN_AS_DRAW
 class Bookmaker():
   def __init__(self, name:str,link:str):
@@ -18,8 +19,10 @@ class Bet():
   def __init__(self,bookmaker:Bookmaker,bet_name:str,odd:float):
     self.bookmaker = bookmaker
     # if the bet name is in LIST_OF_NAMES_TAKEN_AS_DRAW it will be considered a draw
-    if bet_name.lower() in LIST_OF_NAMES_TAKEN_AS_DRAW: self.bet_name = "Draw"
-    else: self.bet_name = bet_name.strip().lower().capitalize()
+    if bet_name.lower() in LIST_OF_NAMES_TAKEN_AS_DRAW:
+      self.bet_name = "Draw"
+    else:
+      self.bet_name = bet_name.strip().lower().capitalize()
     
     self.odd = float(odd)
     self.bet_id = f"{bookmaker.name[:2]}{bet_name[:2]}{bet_name[-2:]}".lower()
@@ -44,7 +47,7 @@ class Event():
     self.bets = bets
     # the event name will be the options that are not called "Draw", ordered alphabetically separated by " vs "
     
-    self.event_name = " vs ".join(sorted([bet.bet_name for bet in self.bets if bet.bet_name.lower() not in LIST_OF_NAMES_TAKEN_AS_DRAW]))
+    self.event_name = f"{" vs ".join(sorted([bet.bet_name for bet in self.bets if bet.bet_name.lower() not in LIST_OF_NAMES_TAKEN_AS_DRAW]))}"
     self.event_id = f"{self.bookmaker.name[:2]}-{self.bets[0].bet_id[2:]}-{self.bets[-1].bet_id[2:]}".lower()
     
   def __str__(self):
@@ -76,7 +79,7 @@ class EventsSet():
         "distance": float("inf")
       }
       for i,group in enumerate(grouped_bets):
-        distance = min([levenshtein_distance(bet.bet_name.lower(),b.bet_name.lower()) for b in group])
+        distance = min([Levenshtein(bet.bet_name.lower(),b.bet_name.lower()).distance() for b in group])
         if distance < ideal["distance"]:
           ideal["distance"] = distance
           ideal["index_group"] = i

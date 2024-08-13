@@ -2,3 +2,5 @@ requests
 beautifulsoup4
 pyTelegramBotAPI
 python-dotenv
+levenshtein-distance
+googlesearch-python

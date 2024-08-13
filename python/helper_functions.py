@@ -1,34 +1,67 @@
 from typing import List
+from googlesearch import search
+from levenshtein_distance import Levenshtein
 
 def simplify_list(lista):
     return [elemento for sublista in lista for elemento in (simplify_list(sublista) if isinstance(sublista, list) else [sublista])]
 
-def levenshtein_distance(str1, str2):
-    # Verificación de tipos
-    if not isinstance(str1, str) or not isinstance(str2, str):
-        raise TypeError("Ambos argumentos deben ser strings")
+def football_name_normalize(name:str):
+    name_to_return = name.lower()
+    
+    words_to_remove = [
+        "fc",
+        "cf",
+        "real",
+        "athletic",
+        "club",
+        "sporting",
+        "deportivo",
+        "real",
+        "cd",
+        "ud",
+        "sd",
+        "cf",
+        "city",
+        "united",
+        "-rj",
+        "independiente",
+        "Fcv",
+        "Club deportivo",
+        "vallecano",
+        "de córdoba",
+        "doradas",
+        "county",
+        "osc",
+        "of"
+    ]
+    for word in words_to_remove:
+        name_to_return = name_to_return.replace(word.lower(),"")
+    return name_to_return.strip().capitalize()
 
-    # Aseguramos que str1 sea la cadena más corta para minimizar el uso de memoria
-    if len(str1) > len(str2):
-        str1, str2 = str2, str1
-
-    # Inicializar la fila previa
-    previous_row = range(len(str2) + 1)
-
-    # Iterar sobre cada carácter de str1
-    for i, c1 in enumerate(str1, 1):
-        current_row = [i]
-        for j, c2 in enumerate(str2, 1):
-            insertions = previous_row[j] + 1
-            deletions = current_row[j - 1] + 1
-            substitutions = previous_row[j - 1] + (c1 != c2)
-            current_row.append(min(insertions, deletions, substitutions))
-        previous_row = current_row
-
-    return previous_row[-1]
-
-
-def create_events_sets(events):
+def create_events_groups(events):
+    events_sorted = sorted(events, key=lambda x: x.event_name)
+    
+    events_grouped = [
+        [events_sorted[0]]
+    ]
+    
+    max_distance = 7
+    for event in events_sorted[1:]:
+        if Levenshtein(
+            football_name_normalize(event.event_name),
+            football_name_normalize(events_grouped[-1][0].event_name)
+            ).distance() < max_distance:
+            events_grouped[-1].append(event)
+        else:
+            events_grouped.append([event])
+        
+    
+    # print(*[e.event_name for e in events_sorted], sep="\n")
+    for events in events_grouped:
+        print(*[e.event_name for e in events], sep="\n")
+        print("-"*80)
+    return events_grouped
+    
     # Dictionary to store grouped events
     event_groups = {}
 
@@ -61,12 +94,11 @@ def create_events_sets(events):
     # filter by the groups that have only 1 event
     event_groups = {group_id: group for group_id, group in event_groups.items() if len(group) > 1}
         
+        
+    print("Event groups:",event_groups)
+    input()
     return event_groups
 
 
-
 if __name__ == "__main__":
-    print(
-        levenshtein_distance("holaa", "holasa") # 1
-    )
-
+    pass    
