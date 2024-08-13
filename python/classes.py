@@ -47,7 +47,7 @@ class Event():
     self.bets = bets
     # the event name will be the options that are not called "Draw", ordered alphabetically separated by " vs "
     
-    self.event_name = f"{" vs ".join(sorted([bet.bet_name for bet in self.bets if bet.bet_name.lower() not in LIST_OF_NAMES_TAKEN_AS_DRAW]))}"
+    self.event_name = " vs ".join(sorted([bet.bet_name for bet in self.bets if bet.bet_name.lower() not in LIST_OF_NAMES_TAKEN_AS_DRAW]))
     self.event_id = f"{self.bookmaker.name[:2]}-{self.bets[0].bet_id[2:]}-{self.bets[-1].bet_id[2:]}".lower()
     
   def __str__(self):
