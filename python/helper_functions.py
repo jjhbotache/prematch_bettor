@@ -54,12 +54,7 @@ def create_events_groups(events):
             events_grouped[-1].append(event)
         else:
             events_grouped.append([event])
-        
     
-    # print(*[e.event_name for e in events_sorted], sep="\n")
-    for events in events_grouped:
-        print(*[e.event_name for e in events], sep="\n")
-        print("-"*80)
     return events_grouped
     
     # Dictionary to store grouped events
