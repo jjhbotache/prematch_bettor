@@ -14,7 +14,7 @@ from time import sleep
 def wrapper(func):
     return func()
 
-send_msg = True                        
+send_msg = False                        
 
 # Crear una lista de funciones a ejecutar
 functions = [scrape_wplay, scrape_betplay, scrape_codere]
@@ -44,10 +44,9 @@ while True:
     similar_event_groups = [groups for groups in create_events_groups(combined_events) if len(groups) > 1]
     
     event_sets = [EventsSet(group) for group in similar_event_groups]
-    
+    event_sets.sort(key=lambda x: x.profit, reverse=True)
     
     sure_bets = [event_set for event_set in event_sets if event_set.is_sure_bet]
-    sure_bets.sort(key=lambda x: x.profit, reverse=True)
 
     system("clear")
     print("amount of events found ", len(event_sets) )
@@ -64,6 +63,7 @@ while True:
 
     else:
         print("No sure bets found")
+        print("Best bets found:", *event_sets[:5], sep="\n")
         
     
 

@@ -119,10 +119,8 @@ class EventsSet():
     
     if self.is_sure_bet:
       for group in grouped_bets: print("group",*group) 
-      
       print("best bets",*self.best_bets, sep="\n")
       print("profit",self.profit) 
-      input()
     
   def __str__(self):
     bet_strings = "\n".join([str(bet) for bet in self.best_bets])
@@ -145,14 +143,14 @@ if __name__ == "__main__":
   
   # print(*bookmakers,sep="\n")
   event_a = Event([
-    Bet(wplay,"tolima",1.5),
-    Bet(wplay,"x",3.5),
-    Bet(wplay,"pereira",3)
+    Bet(wplay,"tolima",10),
+    Bet(wplay,"x",5),
+    Bet(wplay,"pereira",2.5),
   ])
   event_b = Event([
-    Bet(betplay,"pereira",6.25),
-    Bet(betplay,"x",2),
-    Bet(betplay,"tolima",1),
+    Bet(betplay,"pereira",5),
+    Bet(betplay,"x",.2),
+    Bet(betplay,"tolima",.1),
   ])
   
   
