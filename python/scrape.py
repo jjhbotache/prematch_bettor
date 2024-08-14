@@ -12,7 +12,7 @@ import threading
 import time
 import concurrent.futures
 
-save_on_json = False
+save_on_json = True
 
 def timed_scrape(func):
     def wrapper(*args, **kwargs):
@@ -105,13 +105,15 @@ def scrape_wplay() -> list[Event]:
 
       if save_on_json:
         # write the data in a json file
-        with open('wplay_events.json', 'w', ) as outfile:
+        with open('events_wplay.json', 'w', ) as outfile:
           try:
             json.dump([event.dict() for event in list_of_events], outfile, indent=2, ensure_ascii=False)
           except Exception as e:
             if DEBUG:print(f"Error writing the json file: {e}")
 
       print("Scraped events from Wplay:", len(list_of_events))
+      # print all the events
+      
       return list_of_events
     
     except Exception as e:
@@ -218,13 +220,15 @@ def scrape_betplay() -> list[Event]:
 
     if save_on_json:
       # write the data in a json file
-      with open('betplay_events.json', 'w', ) as outfile:
+      with open('events_betplay.json', 'w', ) as outfile:
         try:
           json.dump([event.dict() for event in events], outfile, indent=2, ensure_ascii=False)
         except Exception as e:
           if DEBUG:print(f"Error writing the json file: {e}")
       
     print("Scraped events from Betplay:", len(events))
+    
+      
     return events
   
   except Exception as e:
@@ -235,8 +239,8 @@ def scrape_betplay() -> list[Event]:
 def scrape_codere() -> list[Event]:
   try:
     events = []
-    def scrape_league_events(leage, local_bm):
-      response = requests.get(f"https://m.codere.com.co/NavigationService/Home/GetEvents?parentId={leage['node_id']}&gameTypes=1").json()
+    def scrape_league_events(league, local_bm):
+      response = requests.get(f"https://m.codere.com.co/NavigationService/Home/GetEvents?parentId={league['node_id']}&gameTypes=1").json()
       league_events = []
       for e in response:
         if e["isLive"] or e["SportName"] != "Fútbol": continue
@@ -278,7 +282,7 @@ def scrape_codere() -> list[Event]:
     
     if save_on_json:
       # write on json file
-      with open('codere_events.json', 'w', ) as outfile:
+      with open('events_codere.json', 'w', ) as outfile:
         try:
           json.dump([event.dict() for event in events], outfile, indent=2, ensure_ascii=False)
         except Exception as e:
@@ -294,9 +298,10 @@ def scrape_codere() -> list[Event]:
     
 if __name__ == '__main__':
   print("Scraping data from the bookmakers...")
-  while True:
-    print("Scraping betplay...")
-    scrape_betplay()
+  es = scrape_codere()
+  
+  input()
+  
   with concurrent.futures.ThreadPoolExecutor() as executor:
     wplay_future = executor.submit(scrape_wplay)
     betplay_future = executor.submit(scrape_betplay)

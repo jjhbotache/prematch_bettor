@@ -117,16 +117,24 @@ class EventsSet():
     self.profit = (1/sum_of_implicit_posibilities - 1)*100
     
     
-    if self.is_sure_bet:
-      for group in grouped_bets: print("group",*group) 
-      print("best bets",*self.best_bets, sep="\n")
-      print("profit",self.profit) 
+    # if self.is_sure_bet:
+    #   for group in grouped_bets: print("group",*group) 
+    #   print("best bets",*self.best_bets, sep="\n")
+    #   print("profit",self.profit) 
     
   def __str__(self):
+    given_events =  "\n".join([str(event) for event in self.events])
+    
     bet_strings = "\n".join([str(bet) for bet in self.best_bets])
     return (
-f"""({round(self.profit,2)}%) EventsSet for the event: {self.events[0].event_name}
+f"""({round(self.profit,1)}%) EventsSet for the event: {self.events[0].event_name}
 Sure bet: {self.is_sure_bet}
+
+{"- "*10}
+Given events: 
+{given_events}
+
+{"- "*10}
 Best bets:
 {bet_strings}
 """    )
