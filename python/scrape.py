@@ -4,7 +4,7 @@ import requests
 import bs4
 import time
 
-from .helper_functions import create_events_groups, simplify_list
+from .helper_functions import create_events_groups, event_already_exists, simplify_list
 from .classes import Event,Bet,Bookmaker
 from .constants.constants import DEBUG
 
@@ -76,8 +76,7 @@ def scrape_wplay() -> list[Event]:
             }
             for col in cols_elements
           ]
-          list_of_events.append(
-            Event(
+          new_event = Event(
               bets=[
                 Bet(
                   bet_name=bet_dict["name"],
@@ -87,7 +86,10 @@ def scrape_wplay() -> list[Event]:
                 for bet_dict in bet_dicts
               ]
             )
-          )
+          if event_already_exists(list_of_events,new_event): 
+            print("Event already exists")
+            continue
+          list_of_events.append( new_event )
         except Exception as e:
           if DEBUG:print(f"Error scraping event: {event}, error: {e}")
           continue
@@ -201,9 +203,9 @@ def scrape_betplay() -> list[Event]:
       else:
         raise Exception("Failed to retrieve data from API after 3 attempts")
       events_from_quey = data["events"]
-      for event_from_quey in events_from_quey:
+      for event_from_query in events_from_quey:
         try:
-          bets = [e["outcomes"] for e in event_from_quey["betOffers"] if e["betOfferType"]["id"] == 2][0]
+          bets = [e["outcomes"] for e in event_from_query["betOffers"] if e["betOfferType"]["id"] == 2][0]
           parsed_bets = [
             Bet(
               bookmaker=betplay_bookmaker,
@@ -212,7 +214,11 @@ def scrape_betplay() -> list[Event]:
             )
             for bet in bets
           ]
-          events.append(Event(parsed_bets))
+          new_event = Event(parsed_bets)
+          if event_already_exists(events,new_event): 
+            print("Event already exists")
+            continue
+          events.append(new_event)
         except Exception as e:
           if DEBUG:print(f"Error creating the event: {e}")
           continue
@@ -244,15 +250,21 @@ def scrape_codere() -> list[Event]:
       league_events = []
       for e in response:
         if e["isLive"] or e["SportName"] != "Fútbol": continue
+        
         try:
           game_results = e["Games"][0]["Results"]
+          
           bets = [
             Bet(
               bookmaker=local_bm,
               bet_name=r["Name"],
               odd=r["Odd"]
             ) for r in game_results]
-          league_events.append(Event(bets))
+          new_event = Event(bets)
+          if event_already_exists(events,new_event): 
+            print("Event already exists")
+            continue
+          league_events.append(new_event)
         except Exception as e:
           if DEBUG:print(f"Error creating the event: {e}")
           continue

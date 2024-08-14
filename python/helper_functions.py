@@ -40,6 +40,12 @@ def remove_accents(input_str):
     nfkd_form = unicodedata.normalize('NFKD', input_str)
     return ''.join([c for c in nfkd_form if not unicodedata.combining(c)])
 
+def event_already_exists(events_list, event):
+    for event_to_compare in events_list:
+        if event.event_id == event_to_compare.event_id:
+            return True
+    return False
+
 def simplify_list(lista):
     return [elemento for sublista in lista for elemento in (simplify_list(sublista) if isinstance(sublista, list) else [sublista])]
 
