@@ -26,7 +26,7 @@ class Bet():
       self.bet_name = bet_name.strip().lower().capitalize()
     
     self.odd = float(odd)
-    self.bet_id = f"{bookmaker.name[:2]}{bet_name[:2]}{bet_name[-2:]}".lower()
+    self.bet_id = f"{bookmaker.name[:2]}{football_name_normalize( bet_name)[:2]}{football_name_normalize(bet_name)[-2:]}".lower()
     
     
   def __str__(self):
@@ -46,13 +46,23 @@ class Event():
     assert any([bet.bookmaker == bets[0].bookmaker for bet in bets])
     self.bookmaker = bets[0].bookmaker
     self.bets = bets
-    # the event name will be the options that are not called "Draw", ordered alphabetically separated by " vs "
     
-    self.event_name = " vs ".join(sorted([bet.bet_name for bet in self.bets if bet.bet_name.lower() not in LIST_OF_NAMES_TAKEN_AS_DRAW], key=lambda x: football_name_normalize(x)))
-    self.event_id = f"{self.bookmaker.name[:2]}-{self.bets[0].bet_id[2:]}-{self.bets[-1].bet_id[2:]}".lower()
+    self.sorted_bets = sorted(
+      [bet for bet in self.bets if bet.bet_name.lower() not in LIST_OF_NAMES_TAKEN_AS_DRAW],
+      key=lambda x: football_name_normalize(x.bet_name)
+    )
+    
+    
+    
+    # the event name will be the options that are not called "Draw", ordered alphabetically separated by " vs "
+    self.event_name = " vs ".join([
+      self.sorted_bets[0].bet_name,
+      self.sorted_bets[-1].bet_name
+    ])
+    self.event_id = f"{self.bookmaker.name[:2]}-{self.sorted_bets[0].bet_id[2:]}-{self.sorted_bets[-1].bet_id[2:]}".lower()
     
   def __str__(self):
-    return "Event in {}: \n{}".format(self.bookmaker.name, '\n'.join([str(bet) for bet in self.bets]))
+    return "{}) Event in {}: \n{}".format(self.event_id,self.bookmaker.name, '\n'.join([str(bet) for bet in self.bets]))
   
   def dict(self):
     return {

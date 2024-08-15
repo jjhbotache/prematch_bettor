@@ -11,8 +11,25 @@ TOKEN = os.getenv('TELEGRAM_TOKEN_API')
 # Crea una instancia del bot
 bot = telebot.TeleBot(TOKEN)
 
+# Ruta del archivo de suscriptores
+SUBSCRIBERS_FILE = 'subscribers.txt'
+
+# Carga los suscriptores desde el archivo
+def load_subscribers():
+    try:
+        with open(SUBSCRIBERS_FILE, 'r') as file:
+            subscribers = set(file.read().splitlines())
+    except FileNotFoundError:
+        subscribers = set()
+    return subscribers
+
+# Guarda los suscriptores en el archivo
+def save_subscribers(subscribers):
+    with open(SUBSCRIBERS_FILE, 'w') as file:
+        file.write('\n'.join(subscribers))
+
 # Lista global de suscriptores
-subscribers = set()
+subscribers = load_subscribers()
 
 # Define el comando /start
 @bot.message_handler(commands=['start'])
@@ -40,6 +57,7 @@ def unsubscribe(message):
     chat_id = message.chat.id
     if chat_id in subscribers:
         subscribers.remove(chat_id)
+        save_subscribers(subscribers)  # Guarda los suscriptores actualizados
         bot.reply_to(message, 'Te has desuscrito correctamente.')
     else:
         bot.reply_to(message, 'No estás suscrito.')
@@ -53,14 +71,14 @@ def echo(message):
 
 # Función para enviar mensajes a los suscriptores
 def broadcast_msg(msg):
-  for chat_id in subscribers:
-    bot.send_message(chat_id, msg)
+    for chat_id in subscribers:
+        bot.send_message(chat_id, msg)
 
 
 
 def main():
-  print("Starting bot")
-  bot.polling(none_stop=True)
+    print("Starting bot")
+    bot.polling(none_stop=True)
   
 
 threading.Thread(target=main).start()

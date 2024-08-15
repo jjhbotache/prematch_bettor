@@ -53,8 +53,9 @@ def football_name_normalize(name:str):
     name_to_return = name.lower()
     
     words_to_remove = [
-        "-",
+        "(f)",
         " ",
+        "-",
         "(",
         ")",
         "21",
