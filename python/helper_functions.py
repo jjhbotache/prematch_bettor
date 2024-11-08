@@ -97,9 +97,13 @@ def create_events_groups(events, max_distance=5):
     from python.classes import Event
     events_sorted = sorted(events, key=lambda x: football_name_normalize(x.event_name))
     
-    events_grouped:List[Event] = [
-        [events_sorted[0]]
-    ]
+    try:
+        events_grouped:List[Event] = [
+            [events_sorted[0]]
+        ]
+    except IndexError:
+        return []
+        
     
     for event in events_sorted[1:]:
         if Levenshtein(
